@@ -1,67 +1,71 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <!--this is our web page, tab, and search engine results title-->
         <title>
             VB Card
         </title>
 
-        <!--this is to make IE equal Edge and to normalize the browser rendering engine-->
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
 
-        <!--this is to set the default character set-->
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-        <!--this is to keep the responsive site contained int eh device width-->
         <meta name="viewport" content="initial-scale=1.0, maximum-scale=5.0, width=device-width" />
 
-        <!--This is to link to assets or images-->
         <link href="/assets/favicon.ico" rel="shortcut icon" />
 
         <link rel="stylesheet" type="text/css" href="/style/global.css" />
+
+        <link rel="stylesheet" type="slick/css" href="/style/slick.css"/>
 
     </head>
     <body>
 
         <header class="header">
 
-            <section class="headerSection">
-
-                <!--Header Logo with link to Home Page-->
-                <a class="headerLogo" href="/index.html">
-                    <img alt="vb card logo" src="/assets/4.png" width="100px" height="100px"/>
+            <a class="headerLogo" href="/index.html">
+             <img alt="vb card logo" src="/assets/4.png" width="100px" height="100px"/>
                 </a>
 
                 <!--Navigation Menu-->
-                <nav class="mainNavigation">
-                   <a href="/index.html">
-                      Home
+            <nav class="mainNavigation">
+                <div class="nav">
+                    <a href="/index.html">
+                        Home
                     </a>
-            
+                </div>
+
+                <div class="nav">
                     <a href="/virtual.html">
                         Virtual Link
                     </a>
+                </div>
                     
+                <div class="nav">
                     <a href="/personal.html">
                         Personal Profile
                     </a>
+                </div>
 
+                <div class="nav">
                     <a href="/business.html">
                         Business Profile
                     </a>
+                </div>
                     
+                <div class="nav">
                     <a href="/contact.html">
                         Contact Us
                     </a>
+                </div>
                     
-                </nav>
-            </section>
+            </nav>
+            
         </header>
 
         <!--Main Hero Image Container-->
         <section class="hero">
 
-            <div>
+            <div class="heroBlock">
             <!--Main Hero Image-->
                 <picture class="heroPicture">
 
@@ -69,15 +73,14 @@
                     <source srcset="https://dummyimage.com/1000x600/32c22d/fff&text=Logo" media="(orientation: portrait)" />
 
                     <!--Blue Default Image for Desktop-->
-                    <img src="/assets/Website image 1.png" width="150px" height="150px"/>
+                    <img src="/assets/Website image 1.png" width="600px" height="500px" />
                 </picture>
             </div>
 
-            <div>
-                <article class="heroArticle">
+            <div class="heroColumn">
                 
                 <!--Text that explians our heading-->
-                <h3 class="heroHeader">
+                <h3 class="heroUpgrade">
                     Upgrade your integrations with your
                 </h3>
 
@@ -87,13 +90,13 @@
                 </h1>
 
                 <!--Bullet point for the hero-->
-                <ul class="hero">
+                <ul class="herolist">
                     <li>NFC Chip</li>
                     <li>QR Codes</li>
                     <li>Plug and Play</li>
                     <li>Device Support</li>
                 </ul>
-                </article>
+
             </div>
         </section>
         <!--End of Hero Section-->
@@ -101,27 +104,30 @@
         <!--Section with 2 columbs containing 2 business card types, slider with all current profiles listed with VB Card-->
 
         <section>
-            <div class="sectionCards">
-            
-                <h2>Which type of person are you?</h2>
-                
-                <picture class="blankcard">
-                    <img alt="example of blank pvc business card" src="/assets/Blank PVC Card.png" width="512px" height="400px"/>
-                    <h2>PVC Business Card</h2>
-                </picture>
 
-                <picture class="blankcard">
-                    <img alt="example of blank bamboo business card" src="/assets/Blank Bamboo Card.png" width="512px" height="400px"/>
-                    <h2>Bamboo Business Card</h2>
-                </picture>
+            <div class="sectionHeader">
+                <h2>Which type of person are you?</h2>
+            </div>
+
+            <div class="sectionCards">
+
+                <div class="sectionContent">
+                    <picture>
+                        <img alt="example of blank pvc business card" src="/assets/Blank PVC Card.png" class="blankCard"/>
+                        <h2>PVC Business Card</h2>
+                    </picture>
+
+                    <picture>
+                        <img alt="example of blank bamboo business card" src="/assets/Blank Bamboo Card.png" class="blankCard"/>
+                        <h2>Bamboo Business Card</h2>
+                    </picture>
+                </div>
             </div>
 
             <!--Slider with examples of profiles-->
             <div class="bcardSlider">
                 <picture class="slider">
                 <img src="/assets/VB Card examples/Adams Doors.png" alt="adams doors business card example" width="512px" height="400px">
-
-                <img src="/assets/VB Card examples/Bearings International layout.png" alt="bearings international business card example" width="512px" height="400px">
 
                 <img src="/assets/VB Card examples/Fiona Williamson Card.png" alt="fiona williamson business card example" width="512px" height="400px">
 
@@ -140,12 +146,12 @@
             </div> 
         </section> 
         
-        <section>
-            <h2>
+        <section class="last">
+            <h2 class="lastHeader">
                 Profile for every Business. Choose one of the following 3 profiles that best suits your
             </h2>
 
-            <div class="sectionprofiles">
+            <div class="sectionProfiles">
                 <article class="profiles">
                     <img src="/assets/Virtual link only profile.png" alt="virtual link profile image" width="120px" height="120px">
 
@@ -184,3 +190,6 @@
                 </article>
             </div>
         </section>
+
+    </body>
+</html>

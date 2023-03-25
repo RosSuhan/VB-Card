@@ -7,23 +7,78 @@ html {
     color: black
 }
 
+.headerLogo{
+    width: 10%;
+    flex-shrink: 1;
+    flex-grow: 2;
+    flex-basis: 50px;
+    align-self: auto;
+}
+
+.mainNavigation{
+    order: 2;
+    display: flex;
+    flex-shrink: 1;
+    flex-grow: 2;
+    flex-basis: 50px;
+    width: 90%;
+    font-size: 16px;
+}
+
 header{
     width: 100%;
     background-color: aquamarine;
     display: flex;
     flex-direction: row;
+    border: 20px solid red;
 }
 
-.mainNavigation{
-    width 70%
-    align-content: right;
-}
-
-nav{
+.nav{
     border: 2px solid black;
     border-radius: 0 0 0 0;
     margin: 0 auto 0;
     max-width: 600px;
+    margin: 20px;
+    padding: 50px;
+    font-family: Helvetica;
+    align-content: baseline;
+}
+
+.navactive{
+    color:brown;
+}
+
+.hero{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    border: 20px solid purple;
+}
+
+.heroBlock{
+    border: 10px solid pink;
+    width: 50%;
+}
+
+.heroColumn{
+    border: 10px solid white;
+    width: 50%;
+}
+
+.heroPicture{
+    padding: 20px;
+    box-align: right;
+}
+
+.heroColumn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.heroUpgrade{
+    border: 10px solid red;
 }
 
 ul{
@@ -32,12 +87,17 @@ ul{
 }
 
 h2{
-    widht 100%
+    widht: 100%;
     align-content: center;
-    color: blue;
+    color: black;
 }
 
-.sectionCards{
+.sectionHeader{
+    width: 100%;
+    border: 10px solid blue;
+}
+
+.sectionContent{
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -48,6 +108,11 @@ h2{
     border: 10px solid black;
 }
 
+.blankCard{
+    width: 412px;
+    height: 300px;
+}
+
 .bcardSlider{
     width: 100%;
     display: flex;
@@ -56,15 +121,26 @@ h2{
     justify-content:space-evenly;
     align-items: center;
     align-content: center;
-   }
+}
 
-.sectionprofiles{
+.last{
+    border: 10px solid peru;
+}
+
+.lastHeader{
+    background-color: blueviolet;
+}
+
+.sectionProfiles{
     width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-content: center;
 }
 
 .profiles{
-    width 33.33%
+    width: 33%;
+    flex-shrink: 1; 
+    align-items: center;
 }
