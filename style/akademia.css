@@ -1,0 +1,17 @@
+html{
+    background-color: white;
+}
+
+.header{
+    background-color: #935e28;
+    text-align: center;
+}
+
+.personal{
+    background-color: aqua;
+    text-align: center;
+    font: 400;
+    font-family: 'lora';
+    font-style: normal;
+    font-size: large;
+}
