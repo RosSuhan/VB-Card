@@ -14,8 +14,6 @@ body{
   }
   
 .header{
-   background-color: #0e1e3b;
-   border-bottom: 20px solid #935e28;
    display: flex;
    justify-content: center;
 }
@@ -54,6 +52,7 @@ a{
   
 .logo{
   display: inline-block;
+  border-radius: 90px;
 }
   
   
@@ -76,15 +75,11 @@ a{
   margin: 5%;
   text-align: center;
 }
-
-.button > open {
-  background-color: white;
-}
   
 .buttonContent{
   background-color: transparent;
   text-align: center;
-  color: whitesmoke;
+  color: white;
   font-size: large;
   font-weight: bold;
   border: none;
@@ -95,11 +90,14 @@ a{
 details {
     font: 16px "Acumin Pro Font family", sans-serif;
     width: 620px;
+    background-color: #3FA79D;
+    display: inline-block;
 }
     
 details > summary {
     padding: o;
     width: 12em;
+    background-color: #3FA79D;
     border: none;
     box-shadow: none;
     cursor: pointer;
@@ -108,12 +106,15 @@ details > summary {
 }
     
 details > p {
-  border-radius: 0;
-  background-color: white;
-  padding: 2px 6px;
-  margin: 0;
-  box-shadow: none;
-  text-align: center;
+    border-radius: 0;
+    background-color: transparent;
+    padding: 2px 6px;
+    margin: 0;
+    box-shadow: none;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
 }
     
 details[open] > summary {
@@ -124,4 +125,9 @@ details[open] > summary {
     background-color: #0e1e3b;
     border-top: 10px solid #935e28;
     block-size: 10vh;
+}
+
+.color{
+    background-color: #49a2ac, #676968, #aaadae, #cfebec;
+
 }
