@@ -1,0 +1,251 @@
+html { 
+    margin: left="50px" top="0px" right="50%" bottom="0px";
+    font-size: 22px;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    color: #1a1a1a
+}
+
+a{
+  flex: 2;
+  text-decoration: none;
+  outline: none;
+  text-align: center;
+  line-height: 3;
+  color: #1a1a1a;
+}
+
+a:active{
+    text-decoration: underline;
+}
+
+a:hover{
+    background-color: grey;
+}
+
+.headerLogo{
+width: 10%;
+}
+
+.mainNavigation{
+    width: 90%;
+    display: flex;
+    flex-shrink: 1;
+    flex-grow: 2;
+    flex-basis: 50px;
+    font-size: 16px;
+    gap: 3%;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+.navactive{
+    color:brown;
+}
+
+.hero{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-image: url(/assets/Galaxy\ background.png);
+}
+
+.heroBlock{
+    width: 50%;
+    text-align: center;
+}
+
+.heroColumn{
+    width: 50%;
+    text-align: center;
+}
+
+.heroPicture{
+    padding: 20px;
+    box-align: right;
+}
+
+.heroColumn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.heroUpgrade{
+  font-size: larger;
+}
+
+ul{
+    list-style-type: "";
+    text-align: center;
+
+}
+
+h2{
+    width: 100%;
+    align-content: center;
+    color: whitesmoke;
+    text-align: center;
+}
+
+.sectionHeader{
+    width: 100%;
+background: url(/assets/Galaxy\ background.png) purple; border:5px solid blue; padding:5px; 
+-webkit-background-clip: text, border; color: transparent;
+-webkit-background-clip: content-box;
+background-clip: content-box;
+}
+
+.example{
+    width: 400px;
+    height: 250px;
+}
+
+.sectionContent{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+}
+
+.blankCard{
+    width: 412px;
+    height: 300px;
+}
+
+.testing{
+    animation: 3s ease-in 1s infinite reverse both running slidein;
+}
+
+.slider{
+width: 100%;
+animation: ease-in 3s 1s infinite reverse ease-in;
+}
+
+.last{
+    border: 10px solid peru;
+}
+
+.lastHeader{
+    background-color: blueviolet;
+}
+
+.sectionProfiles{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    text-align: center;
+}
+
+.profilesV{
+    width: 33%;
+    flex-shrink: 1; 
+    text-align: center;
+}
+
+.profilesP{
+    width: 33%;
+    flex-shrink: 1; 
+    text-align: center;
+}
+
+.profilesB{
+    width: 33%;
+    flex-shrink: 1; 
+    text-align: center;
+}
+
+.pageTitle{
+width: 100%;
+text-align: center;
+background-color: purple;
+}
+
+.shop{
+background-color: aqua;
+display: flex;
+flex-direction: row;
+}
+
+.shopImage{
+background-color: brown;
+width: 50%;
+flex-shrink: 1;
+flex-grow: 2;
+flex-basis: 50px;
+}
+
+.shopPrice{
+    background-color: blue;
+    border: 10px black;
+    width: 50%;
+    flex-shrink: 1;
+    flex-grow: 2;
+    flex-basis: 50px;
+    background: linear-gradient(340deg, rgb(0,214,183) 10%,
+    rgb(0,184,161) 20%,
+    rgb(0,165,176) 30%,
+    rgb(16,145,197) 40%,
+    rgb(14,131,212) 50%,
+    rgb(0,93,145) 60%,
+    rgb(0,63,132) 70%,
+    rgb(69,13,158) 80%,
+    rgb(100,34,198) 90%);
+}
+
+.shopDescription{
+    background-color: blanchedalmond;
+    border: 10px blue;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    color: black;
+}
+
+.order{
+    background-color: aquamarine;
+    border-radius: 20%;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    padding: 30px;
+    font-size: 18px;
+    font-family: Verdana;
+}
+
+.contact{
+    border: 10px solid red;
+}
+
+.contactBlock{
+    width: 100%;
+    background-color: aqua;
+    display: flex;
+    flex-direction: row;
+}
+
+.contactForm{
+    width: 50%;
+    border: 10px solid purple;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+}
+
+.contactDetails{
+    width: 50%;
+    border:10px solid pink;
+}

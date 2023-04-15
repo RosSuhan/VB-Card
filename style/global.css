@@ -1,251 +1,482 @@
-html { 
-    margin: left="50px" top="0px" right="50%" bottom="0px";
-    font-size: 22px;
-    background-color: #1a1a1a;
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.5;
-    color: white
+html{
+    font-family: "acumin-pro", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
-a{
-  flex: 2;
-  text-decoration: none;
-  outline: none;
-  text-align: center;
-  line-height: 3;
-  color: white;
-}
-
-a:active{
-    text-decoration: underline;
-}
-
-a:hover{
-    background-color: grey;
+.header{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
 }
 
 .headerLogo{
-width: 10%;
+    padding-left: 5%;
+    padding-top: 1%;
+    padding-bottom: 1%;
 }
 
-.mainNavigation{
-    width: 90%;
-    display: flex;
-    flex-shrink: 1;
-    flex-grow: 2;
-    flex-basis: 50px;
-    font-size: 16px;
-    gap: 3%;
-}
-
-header{
-    width: 100%;
+.mainNav{
+    width: 60%;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: flex-end;
+    align-content: flex-end;
+    column-gap: 5%;
+    padding-right: 5%;
+    padding-bottom: 1%;
 }
 
-
-
-.navactive{
-    color:brown;
+.navLink{
+    color: #1a1a1a;
+    text-decoration: none;
+    font-size: 20px;
 }
 
-.hero{
-    width: 100%;
+.navLink:active{
+    text-decoration: none;
+    color: #00d6b7;
+}
+
+.introMain{
+    background-color: #1a1a1a;
+    margin: 0%;
+    padding-left: 5%;
+    padding-top: 2%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.intro{
     display: flex;
     flex-direction: row;
-    background-image: url(/assets/Galaxy\ background.png);
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: space-around;
+    align-content: center;
+    padding: 2%;
 }
 
-.heroBlock{
+.introBlock{
     width: 50%;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
-.heroColumn{
+.introImage{
     width: 50%;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
-.heroPicture{
-    padding: 20px;
-    box-align: right;
+.introArticle{
+    color: aliceblue;
+    row-gap: 0;
 }
 
-.heroColumn{
+.introH2{
+    font-size: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.introH1{
+    font-size: 89px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: -10%;
+    margin-bottom: -10%;
+}
+
+.introButton{
+    width: 60%;
+}
+
+.action{
+    width: 100%;
+    background-color: #00d6b7;
+    padding: 5%;
+    border-radius: 10px;
+}
+
+.actionLink{
+    text-decoration: none;
+    color: black;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.stepBlock{
+    padding-left: 5%;
+    padding-top: 0%;
+    padding-right: 5%;
+    padding-bottom: 2%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
-}
-
-.heroUpgrade{
-  font-size: larger;
-}
-
-ul{
-    list-style-type: "";
-    text-align: center;
-
-}
-
-h2{
-    width: 100%;
     align-content: center;
-    color: whitesmoke;
-    text-align: center;
+    border: #1a1a1a solid 5px;
 }
 
-.sectionHeader{
+.stepTitle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.stepHeading{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     width: 100%;
-background: url(/assets/Galaxy\ background.png) purple; border:5px solid blue; padding:5px; 
--webkit-background-clip: text, border; color: transparent;
--webkit-background-clip: content-box;
-background-clip: content-box;
+    justify-content: center;
+    column-gap: 3%;
+    font-size: 50px;
+    margin-bottom: -7%;
 }
 
-.example{
-    width: 400px;
-    height: 250px;
+.number0{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    place-items: 1;
 }
 
-.sectionContent{
+.number1{
+    color: #00d6b7;
+}
+
+.number2{
+    color: #005d91;
+}
+
+.number3{
+    color: #6422ae;
+}
+
+.stepArticle{
+    font-size: 60px;
     width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    text-align: justify;
+    margin-top: 2%;
+}
+
+.steps{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: start;
+    align-items: start;
+    margin-top: -5%;
+}
+
+.step1{
+    width: 28%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: top;
+    align-content: space-around;
+    padding: 1%;
+}
+
+.step2{
+    font-weight: bold;
+    font-size: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.step3{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 0% 10% 0% 10%
+}
+
+.step4{
+    text-align: center;
+}
+
+.stepbutton{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: end;
+}
+
+.stepAction{
+    width: 33%;
+    background-color: #00d6b7;
+    padding: 1%;
+    border-radius: 10px;
+}
+
+@keyframes slide {
+    100%,
+    50% {
+      transform: translateX(-1800px);
+    }
+    50%,
+    20% {
+      transform: translateX(50px);
+    }
+}
+
+.sliderBox{
+    background-color: grey;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 200px;
+    overflow: hidden;
+}
+
+.slider{
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    column-gap: 8%
+}
+    
+.sliderBlock{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overscroll-behavior-x: auto;
+}
+
+.sliderImage{
+    height: 180px;
+    width: fit-content;
+    transform: translateX(100px) rotate(45deg);
+    animation: backwards;
+    animation-name: slide;
+    animation-direction: forward;
+    animation-duration: 10s;
+    animation-delay: 0s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
+    animation-play-state: running;
+}
+
+.cards{
+    background-color: #1a1a1a;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     align-content: center;
 }
 
-.blankCard{
-    width: 412px;
-    height: 300px;
+.cardHeader{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    color: aliceblue;
+    font-size: 50px;
 }
 
-.testing{
-    animation: 3s ease-in 1s infinite reverse both running slidein;
+.cardOptions{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    column-gap: 3%;
 }
 
-.slider{
-width: 100%;
-animation: ease-in 3s 1s infinite reverse ease-in;
+.card{
+    width: 30%;
+
 }
 
-.last{
-    border: 10px solid peru;
+.imageCaption{
+    color: aliceblue;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 900;
 }
 
-.lastHeader{
-    background-color: blueviolet;
+.cardButton{
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }
 
-.sectionProfiles{
+.cardAction{
+    width: 30%;
+    background-color: #00d6b7;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border-radius: 10px;
+    font-size: 80%;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5%;
+}
+
+.formHeader{
+    font-size: 40px;
+}
+
+form.contactForm {
+    display: table;
+    font-size: 30px;
+    width: 80%;
+}
+
+div.contactForm {
+    display: table-row;
+    height: 30px;
+}
+
+label,
+input {
+    display: table-cell;
+    margin-bottom: 10px;
+    height: 50px;
+    width: 100%;
+    font-size: 20px;
+}
+
+label {
+    padding-right: 10px;
+}
+
+.contactButton{
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 25%;
+    background-color: #00d6b7;
+    border-radius: 10px;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.footerBlock{
+    background: linear-gradient(90deg, #00d6b7, #005d91, #6422ae);
+    display: column;
+    flex-direction: row;
+    padding: 2%;
+}
+
+.footerLogo{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 80px;
+}
+
+.bottomBlock{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.empty{
+    width: 15%;
+}
+
+.middleBlock{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.socialHeading{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.footerH4{
+    width: 100%;
+    color: aliceblue;
+    font-size: 35px;
+    font-weight: 900;
+}
+
+.socialIcon{
     width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-content: center;
-    text-align: center;
-}
-
-.profilesV{
-    width: 33%;
-    flex-shrink: 1; 
-    text-align: center;
-}
-
-.profilesP{
-    width: 33%;
-    flex-shrink: 1; 
-    text-align: center;
-}
-
-.profilesB{
-    width: 33%;
-    flex-shrink: 1; 
-    text-align: center;
-}
-
-.pageTitle{
-width: 100%;
-text-align: center;
-background-color: purple;
-}
-
-.shop{
-background-color: aqua;
-display: flex;
-flex-direction: row;
-}
-
-.shopImage{
-background-color: brown;
-width: 50%;
-flex-shrink: 1;
-flex-grow: 2;
-flex-basis: 50px;
-}
-
-.shopPrice{
-    background-color: blue;
-    border: 10px black;
-    width: 50%;
-    flex-shrink: 1;
-    flex-grow: 2;
-    flex-basis: 50px;
-    background: linear-gradient(340deg, rgb(0,214,183) 10%,
-    rgb(0,184,161) 20%,
-    rgb(0,165,176) 30%,
-    rgb(16,145,197) 40%,
-    rgb(14,131,212) 50%,
-    rgb(0,93,145) 60%,
-    rgb(0,63,132) 70%,
-    rgb(69,13,158) 80%,
-    rgb(100,34,198) 90%);
-}
-
-.shopDescription{
-    background-color: blanchedalmond;
-    border: 10px blue;
+    justify-content: center;
     align-items: center;
     align-content: center;
-    text-align: center;
-    color: black;
+    column-gap: 2%;
 }
 
-.order{
-    background-color: aquamarine;
-    border-radius: 20%;
-    align-items: center;
-    align-content: center;
-    text-align: center;
-    padding: 30px;
-    font-size: 18px;
-    font-family: Verdana;
-}
-
-.contact{
-    border: 10px solid red;
-}
-
-.contactBlock{
-    width: 100%;
-    background-color: aqua;
+.lastBlock{
     display: flex;
-    flex-direction: row;
-}
-
-.contactForm{
-    width: 50%;
-    border: 10px solid purple;
-    text-align: center;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
     align-content: center;
-    align-items: center;
 }
 
-.contactDetails{
-    width: 50%;
-    border:10px solid pink;
+.text{
+    color: aliceblue;
+    font-size: 20px;
+    font-weight: 900;
+    row-gap: 1%;
+    line-height: 2px;
 }
