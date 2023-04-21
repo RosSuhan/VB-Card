@@ -75,7 +75,7 @@
 
                     <!--button to contact-->
                 <div class="button">
-                    <button name="contact" class="buttonContent">
+                    <button name="contact" class="buttonContent" id="akademiaJohanLubbe">
                         <details>
                             <summary class="buttonContent">
                                 Kontak Johan Lubbe
@@ -98,6 +98,12 @@
 
                             </ul>
                         </details>
+
+                        <div>
+                            <button type="button" id="johanContactButton">
+                                Save to Contact                                
+                            </button>
+                        </div>
                     </button>
                 </div>
 
@@ -288,5 +294,39 @@
             </div>
         </footer>
 
+    
+        <!-- this script tag is for JavaScript -->
+        <script>
+            (function(){
+                function createVcard(contact){
+                    // create a vcard file
+                    const vcard = `BEGIN:VCARD\nVERSION:4.0\nFN:"${contact.name}"\nTEL;TYPE=work,voice:"${contact.phone}"\nEMAIL:"${contact.email}""\nURL:"${contact.url}"\nEND:VCARD`;
+                    const blob = new Blob([vcard], { type: "text/vcard" });
+                    const url = URL.createObjectURL(blob);
+                    
+                    const newLink = document.createElement('a');
+                    newLink.download = contact.name + ".vcf";
+                    newLink.textContent = contact.name;
+                    newLink.href = url;
+                    
+                    newLink.click();
+                }
+
+
+                // create one of these per line
+                document.getElementById("johanContactButton").addEventListener("click", () => {
+                    const contact = {
+                        name: "Akademia - Johan Lubbe",
+                        phone: "+27 861 222 888",
+                        email: "johan@akademia.ac.za",
+                        url: "https://vbcard.mobi/dummy-page"
+                    };
+
+                    createVcard(contact)
+                });
+            }())
+        
+        </script>
+                
     </body>
 </html>
