@@ -108,6 +108,7 @@ html{
     background-color: #00d6b7;
     padding: 5%;
     border-radius: 10px;
+    border: none;
 }
 
 .actionLink{
@@ -158,14 +159,17 @@ html{
 
 .number1{
     color: #00d6b7;
+    
 }
 
 .number2{
     color: #005d91;
+    margin-left: -1%;
 }
 
 .number3{
     color: #6422ae;
+    margin-left: -1%;
 }
 
 .stepArticle{
@@ -236,6 +240,7 @@ html{
     background-color: #00d6b7;
     padding: 1%;
     border-radius: 10px;
+    border: none;
 }
 
 @keyframes slide {
@@ -352,6 +357,7 @@ html{
     padding-bottom: 1%;
     border-radius: 10px;
     font-size: 80%;
+    border: none;
 }
 
 .form{
@@ -404,6 +410,7 @@ label {
     border-radius: 10px;
     font-weight: 900;
     font-size: 20px;
+    border: none;
 }
 
 .footerBlock{
@@ -479,4 +486,40 @@ label {
     font-weight: 900;
     row-gap: 1%;
     line-height: 2px;
+}
+
+.shop{
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: row;
+    height: 50vh;
+    padding-bottom: 20px;
+}
+
+.shopImage{
+    background-color: purple;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.shopPrice{
+    background-color: blue;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: left;
+    padding: 50px;
+}
+
+.order{
+    background-color: red;
+}
+
+.shopDescription{
+    background-color: #00d6b7;
+    padding-left: 50px;
 }
