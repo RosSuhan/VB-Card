@@ -13,7 +13,7 @@
 
         <link href="/assets/Fav icon/favicon.ico" rel="shortcut icon" />
 
-        <link rel="stylesheet" type="text/css" href="/style/stef.css" />
+        <link rel="stylesheet" type="text/css" href="/profiles/profilestyles/stef.css" />
 
 
     </head>
@@ -22,8 +22,8 @@
         <div class="background">
 
             <div class="bodyCover">
-                <header>
-                    <img src="/stefano-schoonees-infogold/assets/Stefano Schoonees.jpg" alt="stefano schoonees image" width="360px" height="360px" class="logo">
+                <header class="header">
+                    <img src="/profiles/stefano-schoonees-infogold/assets/Stefano Schoonees.jpg" alt="stefano schoonees image" class="logo">
                 </header>
 
                 <div>
@@ -31,104 +31,62 @@
                         Stefano Schoonees
                     </h1>
 
-                    <h2>
-                        Business Ownder
-                    </h2>
+                    <h3>
+                        Business Owner
+                    </h3>
+                </div>
 
+                <div class="content">
                     <!--button to contact-->
                     <div class="button">
-                        <button name="contact" class="buttonContent">
-                            <details>
-                                <summary class="buttonContent">
-                                    Contact Stefano Schoonees
-                                </summary>
-
-                                <ul>
-                                    <li>
-                                        <a href="tel:+27712381000">
-                                            071 238 1000
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="tel:+27712381999">
-                                            071 238 1999
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="mailto:admin@infogold.co.za">
-                                            admin@infogold.co.za
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://goo.gl/maps/NJ6qbUBCx1hHtDty6">
-                                            23 Parakiet Street, Sedgefield
-                                        </a>
-                                    </li>
-                                </ul>
-                            </details>
-                        </button>
+                        <details>
+                            <summary>
+                                Contact Stefano Schoonees
+                            </summary>
+                            <p>
+                                Stefano Schoonees
+                            </p>
+                            <div>
+                                <a href="tel:+27712381000">
+                                    071 238 1000
+                                </a>
+                            </div>
+                            <br>
+                            <div>
+                                <a href="tel:+27712381999">
+                                    071 238 1999
+                                </a>
+                            </div>
+                            <br>
+                            <div>
+                                <a href="mailto:admin@infogold.co.za">
+                                    admin@infogold.co.za
+                                </a>
+                            </div>
+                            <br>
+                           <div>
+                                <a href="https://goo.gl/maps/NJ6qbUBCx1hHtDty6">
+                                    23 Parakiet Street, Sedgefield
+                                </a>
+                            </div>
+                            <br>
+                            <button class="saveButton">
+                                Save To Contacts
+                            </button>
+                        </details>
                     </div>
 
                     <!--button to pryslist-->
                     <div class="button">
-                        <button name="info" class="buttonContent">
-                            <a href="/stefano-schoonees-infogold/assets/infopack.pdf" download="infopack">
+                        <div class="webButton">
+                            <a href="/stefano-schoonees-infogold/assets/infopack.pdf" download="infopack" class="buttonLink">
                                 Infogold Media Pack
                             </a>
-                        </button>
+                        </div>
                     </div>
 
                     <!--button to form-->
                     <div class="button">
-                        <button name="formButton" class="buttonContent">
-                            <details>
-                                <summary class="buttonContent">
-                                    Let Us Get Back To You!
-                                </summary>
-
-                                <div>
-                                    
-                                    <form class="contactForm" method="post" name="leadForm">
-                                        <div>
-                                            <div>
-                                                <label for="name">
-                                                    Name and Surname
-                                                </label>
-                                            </div>
-                                            <div>
-                                                <input type="text" name="name" id="name" placeholder="Name and Surname" required="required">
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div>
-                                                <label for="cellnumber">
-                                                    Cellphone Number
-                                                </label>
-                                            </div>
-                                            <div>
-                                                <input type="tel" name="telephone" id="number" placeholder="Cellphone" required="required" aria-required="true" pattern="[0-9]">
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div>
-                                                <label for="email">
-                                                    Email
-                                                </label>
-                                            </div>
-                                            <div>
-                                                <input type="email" name="email" id="email" placeholder="Email" required="required" aria-required="true">
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div class="form-example">
-                                                <input type="submit" value="Send">
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </details>
-                        </button>
                     </div> 
                 </div>
 

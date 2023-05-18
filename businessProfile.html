@@ -1,0 +1,176 @@
+<head>
+    <title>{title}</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=5.0, width=device-width" />
+
+    <link href="/assets/Fav icon/favicon.ico" rel="shortcut icon" />
+
+    <link rel="stylesheet" type="text/css" href="/style/businessProfile.css" />
+
+
+</head>
+<body>
+
+    <div class="background">
+
+        <div class="bodyCover">
+            <header class="header">
+                <img src="{logo}" alt="" width="200px" height="150px" class="logo">
+            </header>
+
+            
+            <h1 class="name">{title}</h1>
+
+            <p>{company_bio}</p>
+        
+            <div class="">
+                <div class="button">
+                    <details>
+                        <summary class="">
+                            Contact {firstName}
+                        </summary>
+
+                        <div>
+                            <p>
+                                {firstName}{lastName}
+                            </p>
+                        
+                            <a href="tel:{contactNumber1}">
+                                {contactNumber1}
+                            </a>
+
+                            <a href="tel:contactNumber2">
+                                {contactNumber2}
+                            </a>
+
+                            <a href="mailto:{emailAddress}">
+                                {emailAddress}
+                            </a>
+                        
+                            <p>
+                                {address}
+                            </p>
+                            
+                            <p>
+                                {operatingHours}
+                            </p>
+                        </div>
+                    </details>
+                </div>
+            <div>
+
+            <div class="button">
+                <a href="{website}" class="buttonContent">
+                    {website}
+                </a>
+            </div>
+
+            <div class="button">
+                <details>
+                    <summary class="buttonContent">
+                        Company Profile
+                    </summary>
+
+                    <a href="vanessa_assets/Business Description pdf.pdf" download="pdf">
+                        <img src="vanessa_assets/Business Description png.png" alt="Moringa Business Description" width="80%">
+                    </a>
+                </details>
+            </div>
+
+            <div class="button">
+                <details>
+                    <summary class="">
+                        Moringa Adults
+                    </summary>
+
+                    <a href="vanessa_assets/Moringa Adults PDF.pdf" download="pdf">
+                        <img src="vanessa_assets/Moringa Adults png.png" alt="moringa adults pdf" width="80%">
+                    </a>
+                </details>
+            </div>
+
+            <div class="button">
+                <details>
+                    <summary class="">
+                        Moringa Kids
+                    </summary>
+
+                    <a href="vanessa_assets/Moringa Kids PDF.pdf" download="Pricelist">
+                        <img src="vanessa_assets/Moringa Kids png.jpg" alt="moringa kids pdf" width="80%">
+                    </a>
+                </details>
+            </div>
+
+            <div class="button">
+                <details>
+                    <summary class="">
+                        Moringa Pricelist
+                    </summary>
+
+                    <a href="vanessa_assets/PRODUCT PRICE LIST 2023 PDF.pdf" download="Pricelist">
+                        <img src="vanessa_assets/PRODUCT PRICE LIST 2023 png.png" alt="moringa Pricelist" width="80%">
+                    </a>
+                </details>
+            </div>
+
+
+                    <!--Share button-->
+            <div class="share">
+                <div class="socialIcon">
+
+                    <a href="{facebook}" >
+                        <img src="/assets/Facebook Icon.png" alt="facebook" width="45px" height="45px">
+                    </a>
+
+                    <a href="{instagram}">
+                        <img src="/assets/Instagram Icon.png" alt="instagram" width="45px" height="45px">
+                    </a>
+
+                    <a href="linkedin">
+                        <img src="/assets/LinkedIn Icon.png" alt="linkedin" width="45px" height="45px">
+                    </a>
+
+                    <a href="{whatsapp}">
+                        <img src="/assets/Whatsapp Icon.png" alt="whatsapp" width="45px" height="45px">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function(){
+            function createVcard(contact){
+                // create a vcard file
+                const vcard = `BEGIN:VCARD\nVERSION:4.0\nFN:"${contact.name}"\nTEL;TYPE=work,voice:"${contact.phone}"\nEMAIL:"${contact.email}""\nURL:"${contact.url}"\nEND:VCARD`;
+                const blob = new Blob([vcard], { type: "text/vcard" });
+                const url = URL.createObjectURL(blob);
+    
+                const newLink = document.createElement('a');
+                newLink.download = contact.name + ".vcf";
+                newLink.textContent = contact.name;
+                newLink.href = url;
+    
+                newLink.click();
+            }
+    
+    
+            // create one of these per line
+            document.getElementById("saveVanessa").addEventListener("click", () => {
+                const contact = {
+                    name: "Moringa - Vanessa Coetzee",
+                    phone: "+27 76 491 4297",
+                    email: "orders@moringaorganica.co.za",
+                    url: "https://vbcard.mobi/vanessa-coetzee/"
+                };
+    
+                createVcard(contact)
+            });
+        }())
+    
+    </script>
+</body>
