@@ -1,5 +1,3 @@
-
-
 body{
   margin: 0;
   width: 100%;
@@ -13,10 +11,9 @@ a{
 }
   
 .bodyCover{
-  width: 400px;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   align-content: center;
   text-align: center;
@@ -28,7 +25,7 @@ a{
 }
 
 .logo{
-  width: 50%;
+  width: 80%;
 }
 
 .name{
@@ -41,7 +38,7 @@ a{
 
 .bioBlock{
   background-color: transparent;
-  width: 370px;
+  width: 80%;
 }
 
 .bio{
@@ -52,18 +49,13 @@ a{
 }
 
 .content{
-  width: 400px;
+  width: 95%;
   display: flex;
   flex-direction: column;
   align-items: left;
   padding-top: 10px;
-  margin: 0;
+  margin: 2%;
 }
-
-
-  
-
-  
 
 .share{
   display: flex;
@@ -78,13 +70,13 @@ a{
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  align-content: space-evenly;
-  column-gap: 8%;
+  align-content: space-between;
+  column-gap: 2%;
 }
   
 .button{
-  display: flexbox;
-  width: 380px;
+  display: flex;
+  width: 100%;
   flex-direction: column;  
   justify-content: center;
   justify-items: flex-start;
@@ -96,18 +88,17 @@ a{
 }
 
 .saveButton{
-  background-color: #0e1e3b;
+  background-color: #14c0d6ee;
   border: none;
   border-radius: 35px;
   padding: 15px;
   font-size: medium;
   font-weight: 700;
-  color: white;
 }
 
 .webButton{
-  width: 340px;
-  background-color: #0e1e3b;
+  width: 80%;
+  background-color: #14c0d6ee;
   border: none;
   box-shadow: none;
   padding-left: 25px;
@@ -116,12 +107,11 @@ a{
   padding-bottom: 10px;
   border-radius: 30px;
   text-align: left;
-  color: white;
 }
 
 .buttonLink{
   text-decoration: none;
-  color: white;
+  color: black;
   font-size: large;
   font-weight: bold;
   width: 100%;
@@ -129,7 +119,7 @@ a{
 
 .buttonSingle{
   width: 100%;
-  background-color: #0e1e3b;
+  background-color: #14c0d6ee;
   border: none;
   box-shadow: none;
   padding-left: 15px;
@@ -152,8 +142,8 @@ details {
 }
 
 details > summary {
-  width: 350px;
-  background-color: #0e1e3b;
+  width: 85%;
+  background-color: #14c0d6ee;
   border: none;
   box-shadow: none;
   cursor: pointer;
@@ -164,7 +154,6 @@ details > summary {
   padding-right: 10px;
   padding-bottom: 10px;
   border-radius: 30px;
-  color: white;
 }
 
 
@@ -184,7 +173,14 @@ details[open] > p, a {
 }
 
 details[open] > summary {
-  background-color:#0e1e3b;
+  background-color:#14c0d6ee;
 }
 
+footer{
+  width: 100%;
+  background-color: #14c0d6ee;
+}
 
+h6{
+  color: #14c0d6ee;
+}

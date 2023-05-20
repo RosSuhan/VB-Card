@@ -18,7 +18,7 @@ text-decoration: none;
 
 .bodyCover{
 background-color: rgba(245, 245, 245, 0.404);
-width: 400px;
+width: 100%;
 display: flex;
 flex-direction: column;
 justify-content: space-around;
@@ -27,7 +27,7 @@ margin: 0;
 }
 
 .logo{
-display: inline-block;
+width: 80%;
 }
 
 .name{
@@ -36,81 +36,114 @@ font-family: "Acumin Pro Font family", Sans-serif;
 font-size: 30px;
 font-weight: 500;
 padding-bottom: 15px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+align-content: center;
 }
 
 .socialIcon{
 padding-bottom: 15px;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+align-content: center;
+column-gap: 10px;
 }
 
 .content{
-  width: 400px;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: left;
-  padding-top: 10px;
+  justify-content: center;
+  align-items: center;
+  align-content:  center;
   margin: 0;
 }
 
 .webButton{
-  width: 370px;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
   background-color: #C92C1A;
   border: none;
   box-shadow: none;
-  padding-left: 25px;
-  padding-top: 10px;
-  padding-right: 10px;
-  padding-bottom: 10px;
   border-radius: 30px;
-  text-align: left;
+  text-align: center;
   font-weight: bold;
   font-size: large;
   margin-bottom: 5%;
-  margin-left: 3%;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .button{
-  display: flexbox;
-  width: 380px;
+  display: flex;
+  width: 100%;
   flex-direction: column;  
   justify-content: center;
   justify-items: flex-start;
-  font-family: "Acumin Pro Font family", Sans-serif;
   border-radius: 35px 35px 35px 35px;
   text-align: left;
   margin-bottom: 10%;
   padding-left: 15px;
 }
 
+.buttonLink{
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
 .saveButton{
   background-color: #C92C1A;
   border: none;
   border-radius: 35px;
-  padding: 15px;
+  padding: 5px;
   font-size: medium;
   font-weight: 700;
+  color: white;
+  width: 60%;
 }
 
 <!--css code vir die accordion-->
   
 details {
   font: 16px "Acumin Pro Font family", sans-serif;
-  width: 620px;
   background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 details > summary {
-  width: 380px;
+  width: 95%;
+  margin: 0;
   background-color: #C92C1A;
   border: none;
   box-shadow: none;
   cursor: pointer;
   font-weight: bold;
   font-size: large;
-  padding-left: 10px;
-  padding-top: 10px;
-  padding-right: 10px;
-  padding-bottom: 10px;
   border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 
@@ -119,10 +152,9 @@ details > summary {
   color: transparent;
 }
 
-details[open] > p, a {
+details[open] > p, a, div {
   border-radius: 0;
   background-color: transparent;
-  margin: 10px;
   box-shadow: none;
   text-align: left;
   text-decoration: none;
@@ -131,4 +163,13 @@ details[open] > p, a {
 
 details[open] > summary {
   background-color:#C92C1A;
+}
+
+footer{
+  background-color: #C92C1A;
+  width: 100%;
+}
+
+h6{
+  color: #C92C1A;
 }

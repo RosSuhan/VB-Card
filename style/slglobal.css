@@ -1,8 +1,6 @@
-
-
 body{
   margin: 0;
-  background-image: url(/salt&light/assets/Stiaan_Lightbulb_floating_in_the_air_and_salt_falling_in_the_ba_b365486c-e076-417f-bcc0-3f3a2afbeb48.png);
+  background-image: url(/assets/Stiaan_Lightbulb_floating_in_the_air_and_salt_falling_in_the_ba_b365486c-e076-417f-bcc0-3f3a2afbeb48.png);
   background-blend-mode: overlay;
   backface-visibility: visible;
   background-origin: border-box;
@@ -10,7 +8,6 @@ body{
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 100vh;
 }
 
 a{
@@ -20,16 +17,19 @@ a{
 .bodyCover{
   background-color: rgba(245, 245, 245, 0.404);
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   text-align: center;
-  margin: 0;
+}
+
+.header{
+  margin-top: 3%;
 }
 
 .logo{
-  display: inline-block;
+  width: 50%;
 }
 
 .name{
@@ -41,8 +41,14 @@ a{
 }
 
 .socialIcon{
-  padding-bottom: 15px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-between;
+  column-gap: 5%;
 }
+
 
 .button{
   display: flexbox;
@@ -50,11 +56,31 @@ a{
   justify-content: center;
   justify-items: center;
   font-family: "Acumin Pro Font family", Sans-serif;
-  background-color: #3FA79D;
   border-radius: 35px 35px 35px 35px;
   padding: 15px 15px 15px 15px;
   margin: 5%;
   text-align: center;
+}
+
+.webButton{
+  width: 90%;
+  background-color: #3FA79D;
+  border: none;
+  box-shadow: none;
+  padding-left: 25px;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  border-radius: 30px;
+  text-align: left;
+}
+
+.buttonLink{
+  text-decoration: none;
+  color: black;
+  font-size: large;
+  font-weight: bold;
+  width: 100%;
 }
 
 .buttonContent{
@@ -66,35 +92,64 @@ a{
   border: none;
 }
 
+.saveButton{
+  background-color: #3FA79D;
+  border: none;
+  border-radius: 35px;
+  padding: 15px;
+  font-size: medium;
+  font-weight: 700;
+}
+
+
 <!--css code vir die accordion-->
 
 details {
-    font: 16px "Acumin Pro Font family", sans-serif;
-    width: 620px;
-    background-color: #3FA79D;
-  }
-  
-  details > summary {
-    padding: o;
-    width: 12em;
-    background-color: #3FA79D;
-    border: none;
-    box-shadow: none;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: large;
+font: 16px "Acumin Pro Font family", sans-serif;
+background-color: transparent;
+}
 
-  }
-  
-  details > p {
-    border-radius: 0;
-    background-color: transparent;
-    padding: 2px 6px;
-    margin: 0;
-    box-shadow: none;
-    text-align: center;
-  }
-  
-  details[open] > summary {
-    background-color: transparent;
-  }
+details > summary {
+width: 90%;
+background-color: #3FA79D;
+border: none;
+box-shadow: none;
+cursor: pointer;
+font-weight: bold;
+font-size: large;
+padding-left: 20px;
+padding-top: 10px;
+padding-right: 10px;
+padding-bottom: 10px;
+border-radius: 30px;
+text-align: left;
+}
+
+
+
+::marker{
+color: transparent;
+}
+
+details[open] > p, a {
+border-radius: 0;
+background-color: transparent;
+margin: 10px;
+box-shadow: none;
+text-align: left;
+text-decoration: none;
+color: #000000;
+}
+
+details[open] > summary {
+background-color:#3FA79D;
+}
+
+footer{
+width: 100%;
+background-color: #3FA79D;
+}
+
+h6{
+color: #3FA79D;
+}

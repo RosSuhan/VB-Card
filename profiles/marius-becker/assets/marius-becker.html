@@ -13,7 +13,7 @@
 
         <link href="/assets/Fav icon/favicon.ico" rel="shortcut icon" />
 
-        <link rel="stylesheet" type="text/css" href="/style/marius.css" />
+        <link rel="stylesheet" type="text/css" href="/profiles/profilestyles/marius.css" />
 
 
     </head>
@@ -23,106 +23,51 @@
 
             <div class="bodyCover">
                 <header>
-                    <img src="/marius-becker/assets/Marius Becker Image.jpg" alt="logo" width="360px" height="567px" class="logo">
+                    <img src="/profiles/marius-becker/assets/Marius Becker Image.jpg" alt="logo" class="logo">
                 </header>
 
                 <div>
                     <h1 class="name">
                         Marius Becker
                     </h1>
-                    <h2>
+                    <h3>
                         Marlin Steynless
-                    </h2>
-
+                    </h3>
+                </div>
+                <div class="content">
                     <!--button to contact-->
                     <div class="button">
-                        <button name="contact" class="buttonContent">
-                            <details>
-                                <summary class="buttonContent">
-                                    Contact Marius Becker
-                                </summary>
-
-                                <ul>
-                                    <li>
-                                        Marius Becker
-                                    </li>
-                                    <li>
-                                        <a href="tel:+27795034961">
-                                            079 503 4961
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="mailto:marlin.stainlesssteel@gmail.com">
-                                            email@email.co.za
-                                        </a>
-                                    </li>
-                                    <li>
-                                        Mondays to Fridays 08h00 - 17h00
-                                    </li>
-                                </ul>
-                            </details>
-                        </button>
-                    </div>
-                    <!--button to website-->
-                    <div class="button">
-                        <button name="website" class="buttonContent">
-                            <a href="/marius-becker/assets/Biobor-Fuel-Quality-Management-Flyer-2.pdf" download="Biobor-Fuel-Quality-Management-Flyer-2" class="buttonContent">
+                        <details>
+                            <summary class="buttonContent">
+                                Contact Marius Becker
+                            </summary>
+                            <h3>
+                                Marius Becker
+                            </h3>
+                            <div>
+                                <a href="tel:+27795034961">
+                                    079 503 4961
+                                </a>
+                            </div>
+                            <br>
+                            <div>
+                                <a href="mailto:marlin.stainlesssteel@gmail.com">
+                                    marlin.stainlesssteel@gmail.com
+                                </a>
+                            </div>
+                            <p>
+                                Mondays to Fridays 08h00 - 17h00
+                            </p>
+                            <button class="saveButton" id="saveMarlin">
+                                Save To Contacts
+                            </button>
+                        </details>
+                        <br>
+                        <div class="webButton">
+                            <a href="/marius-becker/assets/Biobor-Fuel-Quality-Management-Flyer-2.pdf" download="Biobor-Fuel-Quality-Management-Flyer-2" class="buttonLink">
                                 Biobor Fuel Quality Management
                             </a>
-                        </button>
-                    </div>
-
-                    <!--button to form-->
-                    <div class="button">
-                        <button name="formButton" class="buttonContent">
-                            <details>
-                                <summary class="buttonContent">
-                                    Let Us Get Back To You!
-                                </summary>
-
-                                <div>
-                                    
-                                    <form class="contactForm" method="post" name="leadForm">
-                                        <div>
-                                            <div>
-                                                <label for="name">
-                                                    Name and Surname
-                                                </label>
-                                            </div>
-                                            <div>
-                                                <input type="text" name="name" id="name" placeholder="Name and Surname" required="required">
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div>
-                                                <label for="cellnumber">
-                                                    Cellphone Number
-                                                </label>
-                                            </div>
-                                            <div>
-                                                <input type="tel" name="telephone" id="number" placeholder="Cellphone" required="required" aria-required="true" pattern="[0-9]">
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div>
-                                                <label for="email">
-                                                    Email
-                                                </label>
-                                            </div>
-                                            <div>
-                                                <input type="email" name="email" id="email" placeholder="Email" required="required" aria-required="true">
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div class="form-example">
-                                                <input type="submit" value="Send">
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                                
-                            </details>
-                        </button>
+                        </div>
                     </div>
 
                     <div class="socialIcon">
@@ -139,15 +84,64 @@
                             <img src="/assets/Website.png" alt="twitter" width="45px" height="45px">
                         </a>
                                                 
-                    </div>
-
-                    <!--Share button-->
-                    <div class="share">
-
-                
+                    </div>                
                 </div>
             </div>
         </div>
-
+        <script>
+            (function(){
+                const makeVCardVersion = () => `VERSION:3.0`;
+                const makeVCardName = (name) => `FN:${name}`;
+                const makeVCardOrg = (org) => `ORG:${org}`;
+                const makeVCardTitle = (title) => `TITLE:${title}`;
+                const makeVCardTel = (phone) => `TEL;TYPE=WORK,VOICE:${phone}`;
+                const makeVCardAdr = (address) => `ADR;TYPE=WORK,PREF:;;${address}`;
+                const makeVCardEmail = (email) => `EMAIL:${email}`;
+                const makeVCardURL = (url) => `URL:${url}`;
+                const makeVCardTimeStamp = () => `REV:${new Date().toISOString()}`;
+        
+        
+        function makeVCard({ name, org, title, phone, address, email, url }) {
+        const vCard = `BEGIN:VCARD
+        ${makeVCardVersion()}
+        ${makeVCardName(name)}
+        ${makeVCardOrg(org)}
+        ${makeVCardTitle(title)}
+        ${makeVCardTel(phone)}
+        ${makeVCardAdr(address)}
+        ${makeVCardEmail(email)}
+        ${makeVCardURL(url)}
+        ${makeVCardTimeStamp()}
+        END:VCARD`;
+        
+        return vCard;
+        }
+        
+        
+                function createVCard(contact){
+                    const newLink = document.createElement('a');
+                    const vcard = makeVCard(contact)
+                    const blob = new Blob([vcard], { type: "text/vcard" });
+        
+                    newLink.href = URL.createObjectURL(blob);
+                    newLink.download = `${contact.name}_vcard.vcf`;
+                    newLink.click();
+        
+                    URL.revokeObjectURL(newLink.href);
+                }
+        
+                // create one of these per contact
+                document.getElementById("saveMarlin").addEventListener("click", () => {
+                    const contact = {
+                        name: "Marius Becker",
+                        phone: "+27 79 503 4961",
+                        email: "marlin.stainlesssteel@gmail.com",
+                        url: "https://vbcard.mobi/marius-becker"
+                    };
+        
+                    createVCard(contact)
+                });
+            }())
+        </script>
     </body>
 </html>

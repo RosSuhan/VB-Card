@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Business Finder - Rosalyn van Zyl
+        </title>
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=5.0, width=device-width" />
+
+        <meta http-equiv="refresh" content="7; url='https://rosalyn-van-zyl-business-finder/'" />
+
+        <link href="/assets/Fav icon/favicon.ico" rel="shortcut icon" />
+
+        <link rel="stylesheet" type="text/css" href="/style/businessFinder.css" />
+
+
+    </head>
+    <body>
+
+        <div class="background">
+
+            <div class="bodyCover">
+                <div class="intro">
+                    <header class="header">
+                        <img src="/assets/Business Finder Logo.png" alt="vb card logo" class="logo">
+                    </header>
+                    <h1 class="name">
+                        The Business Finder
+                    </h1>
+                </div>
+
+                <div class="content">
+                    <div class="button">
+                        <details>
+                            <summary>
+                                Contact Rosalyn van Zyl
+                            </summary>
+                            <h3>
+                                Rosalyn van Zyl
+                            </h3>
+                            <br>
+                            <div>
+                                <a href="tel:+27720800499">
+                                    072 080 0499
+                                </a>
+                            </div>
+                            <br>
+                            <div>
+                                <a href="mailto:marketing@thebusinessfinder.co.za">
+                                    marketing@thebusinessfinder.co.za
+                                </a>
+                            </div>
+                            <br>
+                            <button class="saveButton" id="saveRos">
+                                Save To Contacts
+                            </button>
+                        </details>
+                    </div>
+
+
+                    <div class="button">
+                        <div class="webButton">
+                            <a href="https://thebusinessfinder.co.za" class="buttonLink">
+                                Website
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="button">
+                        <div class="webButton">
+                            <a href="/assets/Price list 2022 2023.pdf" download="pricelist" class="buttonLink">
+                                Pricelist
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="button">
+                        <div class="webButton">
+                            <a href="https://chat.whatsapp.com/Hbkn1CuRnThLRKTKxo54vS" class="buttonLink">
+                                Join our Whatsapp Group
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="socialIcon">
+
+                    <a href="" >
+                        <img src="/assets/Facebook Icon.png" alt="salt and light facebook" width="45px" height="45px">
+                    </a>
+
+                    <a href="">
+                        <img src="/assets/Instagram Icon.png" alt="salt and light instagram" width="45px" height="45px">
+                    </a>
+
+                    <a href="https://api.whatsapp.com/send/?phone=27720800499&text&type=phone_number&app_absent=0">
+                        <img src="/assets/Whatsapp Icon.png" alt="salt and light whatsapp" width="45px" height="45px">
+                    </a>
+                </div>
+                <footer>
+                    <h6>
+                        Powered by vbcard.mobi
+                    </h6>
+                </footer>
+
+            </div>
+        </div>
+        <script>
+            details.addEventListener("toggle", (event) => {
+          if (details.open) {
+          /* the element was toggled open */
+          } else {
+          /* the element was toggled closed */
+          }
+          });
+          </script>
+          
+          <script>
+            (function(){
+                const makeVCardVersion = () => `VERSION:3.0`;
+                const makeVCardName = (name) => `FN:${name}`;
+                const makeVCardOrg = (org) => `ORG:${org}`;
+                const makeVCardTitle = (title) => `TITLE:${title}`;
+                const makeVCardTel = (phone) => `TEL;TYPE=WORK,VOICE:${phone}`;
+                const makeVCardAdr = (address) => `ADR;TYPE=WORK,PREF:;;${address}`;
+                const makeVCardEmail = (email) => `EMAIL:${email}`;
+                const makeVCardURL = (url) => `URL:${url}`;
+                const makeVCardTimeStamp = () => `REV:${new Date().toISOString()}`;
+
+
+function makeVCard({ name, org, title, phone, address, email, url }) {
+const vCard = `BEGIN:VCARD
+${makeVCardVersion()}
+${makeVCardName(name)}
+${makeVCardOrg(org)}
+${makeVCardTitle(title)}
+${makeVCardTel(phone)}
+${makeVCardAdr(address)}
+${makeVCardEmail(email)}
+${makeVCardURL(url)}
+${makeVCardTimeStamp()}
+END:VCARD`;
+
+return vCard;
+}
+
+
+                function createVCard(contact){
+                    const newLink = document.createElement('a');
+                    const vcard = makeVCard(contact)
+                    const blob = new Blob([vcard], { type: "text/vcard" });
+
+                    newLink.href = URL.createObjectURL(blob);
+                    newLink.download = `${contact.name}_vcard.vcf`;
+                    newLink.click();
+
+                    URL.revokeObjectURL(newLink.href);
+                }
+
+                // create one of these per contact
+                document.getElementById("saveRos").addEventListener("click", () => {
+                    const contact = {
+                        name: "Rosalyn van Zyl",
+                        org: "The Business Finder",
+                        phone: "+27 72 080 0499",
+                        email: "marketing@thebusinessfinder.co.za",
+                        url: "https://vbcard.mobi/rosalyn-van-zyl-business-finder"
+                    };
+
+                    createVCard(contact)
+                });
+            }())
+        </script>
+    </body>
+</html>

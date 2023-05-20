@@ -142,25 +142,25 @@
 
                         <div>
                             <a href="https://www.facebook.com/MoringaOrganica111" >
-                                <img src="/assets/Facebook Icon.png" alt="salt and light facebook" width="45px" height="45px">
+                                <img src="/assets/Facebook Icon.png" alt="facebook" width="45px" height="45px">
                             </a>
                         </div>
 
                         <div>
                             <a href="https://www.instagram.com/MoringaOrganica111/">
-                                <img src="/assets/Instagram Icon.png" alt="salt and light instagram" width="45px" height="45px">
+                                <img src="/assets/Instagram Icon.png" alt="instagram" width="45px" height="45px">
                             </a>
                         </div>
 
                         <div>
                             <a href="https://linktr.ee/moringaorganica111">
-                                <img src="/assets/LinkedIn Icon.png" alt="salt and light linkedin" width="45px" height="45px">
+                                <img src="/assets/LinkedIn Icon.png" alt="linkedin" width="45px" height="45px">
                             </a>
                         </div>
 
                         <div>
                             <a href="https://api.whatsapp.com/send?phone=27662723566">
-                                <img src="/assets/Whatsapp Icon.png" alt="salt and light whatsapp" width="45px" height="45px">
+                                <img src="/assets/Whatsapp Icon.png" alt="whatsapp" width="45px" height="45px">
                             </a>
                         </div>
                     </div>
@@ -175,45 +175,60 @@
         </footer>
 
         <script>
-            details.addEventListener("toggle", (event) => {
-  if (details.open) {
-    /* the element was toggled open */
-  } else {
-    /* the element was toggled closed */
-  }
-});
-        </script>
-
-        <script>
             (function(){
-                function createVcard(contact){
-                    // create a vcard file
-                    const vcard = `BEGIN:VCARD\nVERSION:4.0\nFN:"${contact.name}"\nTEL;TYPE=work,voice:"${contact.phone}"\nEMAIL:"${contact.email}""\nURL:"${contact.url}"\nEND:VCARD`;
-                    const blob = new Blob([vcard], { type: "text/vcard" });
-                    const url = URL.createObjectURL(blob);
+                const makeVCardVersion = () => `VERSION:3.0`;
+                const makeVCardName = (name) => `FN:${name}`;
+                const makeVCardOrg = (org) => `ORG:${org}`;
+                const makeVCardTitle = (title) => `TITLE:${title}`;
+                const makeVCardTel = (phone) => `TEL;TYPE=WORK,VOICE:${phone}`;
+                const makeVCardAdr = (address) => `ADR;TYPE=WORK,PREF:;;${address}`;
+                const makeVCardEmail = (email) => `EMAIL:${email}`;
+                const makeVCardURL = (url) => `URL:${url}`;
+                const makeVCardTimeStamp = () => `REV:${new Date().toISOString()}`;
         
+        
+        function makeVCard({ name, org, title, phone, address, email, url }) {
+        const vCard = `BEGIN:VCARD
+        ${makeVCardVersion()}
+        ${makeVCardName(name)}
+        ${makeVCardOrg(org)}
+        ${makeVCardTitle(title)}
+        ${makeVCardTel(phone)}
+        ${makeVCardAdr(address)}
+        ${makeVCardEmail(email)}
+        ${makeVCardURL(url)}
+        ${makeVCardTimeStamp()}
+        END:VCARD`;
+        
+        return vCard;
+        }
+        
+        
+                function createVCard(contact){
                     const newLink = document.createElement('a');
-                    newLink.download = contact.name + ".vcf";
-                    newLink.textContent = contact.name;
-                    newLink.href = url;
+                    const vcard = makeVCard(contact)
+                    const blob = new Blob([vcard], { type: "text/vcard" });
         
+                    newLink.href = URL.createObjectURL(blob);
+                    newLink.download = `${contact.name}_vcard.vcf`;
                     newLink.click();
+        
+                    URL.revokeObjectURL(newLink.href);
                 }
         
-        
-                // create one of these per line
+                // create one of these per contact
                 document.getElementById("saveVanessa").addEventListener("click", () => {
                     const contact = {
-                        name: "Moringa - Vanessa Coetzee",
-                        phone: "+27 76 491 4297",
+                        name: "Vanessa Coetzee",
+                        org: "Moringa Organica Pty Ltd",
+                        phone: "+27 66 272 3566",
                         email: "orders@moringaorganica.co.za",
-                        url: "https://vbcard.mobi/vanessa-coetzee/"
+                        url: "https://vbcard.mobi/vanessa-coetzee"
                     };
         
-                    createVcard(contact)
+                    createVCard(contact)
                 });
             }())
-        
         </script>
 
     </body>

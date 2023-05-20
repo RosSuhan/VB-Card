@@ -271,25 +271,49 @@
             </h6>
         </footer>
         
-        <!-- this script tag is for JavaScript -->
         <script>
             (function(){
-                function createVcard(contact){
-                    // create a vcard file
-                    const vcard = `BEGIN:VCARD\nVERSION:4.0\nFN:"${contact.name}"\nTEL;TYPE=work,voice:"${contact.phone}"\nEMAIL:"${contact.email}""\nURL:"${contact.url}"\nEND:VCARD`;
-                    const blob = new Blob([vcard], { type: "text/vcard" });
-                    const url = URL.createObjectURL(blob);
-                    
+                const makeVCardVersion = () => `VERSION:3.0`;
+                const makeVCardName = (name) => `FN:${name}`;
+                const makeVCardOrg = (org) => `ORG:${org}`;
+                const makeVCardTitle = (title) => `TITLE:${title}`;
+                const makeVCardTel = (phone) => `TEL;TYPE=WORK,VOICE:${phone}`;
+                const makeVCardAdr = (address) => `ADR;TYPE=WORK,PREF:;;${address}`;
+                const makeVCardEmail = (email) => `EMAIL:${email}`;
+                const makeVCardURL = (url) => `URL:${url}`;
+                const makeVCardTimeStamp = () => `REV:${new Date().toISOString()}`;
+        
+        
+        function makeVCard({ name, org, title, phone, address, email, url }) {
+        const vCard = `BEGIN:VCARD
+        ${makeVCardVersion()}
+        ${makeVCardName(name)}
+        ${makeVCardOrg(org)}
+        ${makeVCardTitle(title)}
+        ${makeVCardTel(phone)}
+        ${makeVCardAdr(address)}
+        ${makeVCardEmail(email)}
+        ${makeVCardURL(url)}
+        ${makeVCardTimeStamp()}
+        END:VCARD`;
+        
+        return vCard;
+        }
+        
+        
+                function createVCard(contact){
                     const newLink = document.createElement('a');
-                    newLink.download = contact.name + ".vcf";
-                    newLink.textContent = contact.name;
-                    newLink.href = url;
-                    
+                    const vcard = makeVCard(contact)
+                    const blob = new Blob([vcard], { type: "text/vcard" });
+        
+                    newLink.href = URL.createObjectURL(blob);
+                    newLink.download = `${contact.name}_vcard.vcf`;
                     newLink.click();
+        
+                    URL.revokeObjectURL(newLink.href);
                 }
-
-
-                // create one of these per line
+        
+                // create one of these per contact
                 document.getElementById("johanContactButton").addEventListener("click", () => {
                     const contact = {
                         name: "Akademia - Johan Lubbe",
@@ -297,11 +321,10 @@
                         email: "johan@akademia.ac.za",
                         url: "https://vbcard.mobi/dummy-page"
                     };
-
-                    createVcard(contact)
+        
+                    createVCard(contact)
                 });
             }())
-        
         </script>
                 
     </body>

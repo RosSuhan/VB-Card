@@ -37,9 +37,9 @@
                         <summary>
                             Contact Theuns
                         </summary>
-                        <p>
+                        <h3>
                             Theuns Steyn
-                        </p>  
+                        </h3>  
                         <br>              
                         <div>
                             <a href="tel:+27832577858">
@@ -77,5 +77,66 @@
             </div>
         </div>
 
+        <footer>
+            <h6>
+                Powered by vbcard.mobi
+            </h6>
+        </footer>
+        <script>
+            (function(){
+                const makeVCardVersion = () => `VERSION:3.0`;
+                const makeVCardName = (name) => `FN:${name}`;
+                const makeVCardOrg = (org) => `ORG:${org}`;
+                const makeVCardTitle = (title) => `TITLE:${title}`;
+                const makeVCardTel = (phone) => `TEL;TYPE=WORK,VOICE:${phone}`;
+                const makeVCardAdr = (address) => `ADR;TYPE=WORK,PREF:;;${address}`;
+                const makeVCardEmail = (email) => `EMAIL:${email}`;
+                const makeVCardURL = (url) => `URL:${url}`;
+                const makeVCardTimeStamp = () => `REV:${new Date().toISOString()}`;
+        
+        
+        function makeVCard({ name, org, title, phone, address, email, url }) {
+        const vCard = `BEGIN:VCARD
+        ${makeVCardVersion()}
+        ${makeVCardName(name)}
+        ${makeVCardOrg(org)}
+        ${makeVCardTitle(title)}
+        ${makeVCardTel(phone)}
+        ${makeVCardAdr(address)}
+        ${makeVCardEmail(email)}
+        ${makeVCardURL(url)}
+        ${makeVCardTimeStamp()}
+        END:VCARD`;
+        
+        return vCard;
+        }
+        
+        
+                function createVCard(contact){
+                    const newLink = document.createElement('a');
+                    const vcard = makeVCard(contact)
+                    const blob = new Blob([vcard], { type: "text/vcard" });
+        
+                    newLink.href = URL.createObjectURL(blob);
+                    newLink.download = `${contact.name}_vcard.vcf`;
+                    newLink.click();
+        
+                    URL.revokeObjectURL(newLink.href);
+                }
+        
+                // create one of these per contact
+                document.getElementById("saveTheuns").addEventListener("click", () => {
+                    const contact = {
+                        name: "Theuns Steyn",
+                        org: "TLS IT Solution",
+                        phone: "+27 83 257 7858",
+                        email: "tlsitsolutions@outlook.com",
+                        url: "https://vbcard.mobi/tls-it-solutions"
+                    };
+        
+                    createVCard(contact)
+                });
+            }())
+        </script>
     </body>
 </html>

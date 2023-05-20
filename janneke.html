@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>
-            Fiona Williamson Attorney
+            Janneke Nel - vbcard
         </title>
 
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
@@ -13,7 +13,7 @@
 
         <link href="/assets/Fav icon/favicon.ico" rel="shortcut icon" />
 
-        <link rel="stylesheet" type="text/css" href="/profiles/profilestyles/fiona.css" />
+        <link rel="stylesheet" type="text/css" href="/style/janneke.css" />
 
 
     </head>
@@ -22,53 +22,47 @@
         <div class="background">
 
             <div class="bodyCover">
-                <header class="header">
-                    <img src="/profiles/fiona-williamson/assets/Fiona Williamson Profile Logo white background.png" class="logo">
-                </header>
-
-                <div>
+                <div class="intro">
+                    <header class="header">
+                        <img src="/assets/VB Icon1.png" alt="vb card logo" class="logo">
+                    </header>
                     <h1 class="name">
-                        Fiona Williamson
+                        Janneke Nel
                     </h1>
-
-                    <h3>
-                        Business Owner
-                    </h3>
-                </div>
+                </div>         
 
                 <div class="content">
-                    <!--button to contact-->
                     <div class="button">
                         <details>
-                            <summary class="buttonContent">
-                                Contact Fiona Williamson
+                            <summary>
+                                Contact Janneke Nel
                             </summary>
-                            <p>
-                                Fiona Williamson
-                            </p>
+                            <h3>
+                                Janneke Nel
+                            </h3>
                             <br>
                             <div>
-                                <a href="tel:+27828206428">
-                                    082 820 6428
+                                <a href="tel:+27714735834">
+                                    071 473 5834
                                 </a>
                             </div>
                             <br>
                             <div>
-                                <a href="mailto:fiona@fwlaw.co.za">
-                                    fiona@fwlaw.co.za
+                                <a href="mailto:info@vbcard.mobi">
+                                    info@vbcard.mobi
                                 </a>
                             </div>
                             <br>
-                            <button class="saveButton" id="saveFiona">
+                            <button class="saveButton" id="saveJanneke">
                                 Save To Contacts
                             </button>
                         </details>
                     </div>
 
-                    <!--button to website-->
+
                     <div class="button">
                         <div class="webButton">
-                            <a href="https://fwlaw.co.za/" class="buttonLink">
+                            <a href="https://vbcard.mobi" class="buttonLink">
                                 Website
                             </a>
                         </div>
@@ -76,35 +70,39 @@
 
                     <div class="button">
                         <div class="webButton">
-                            <a href="https://goo.gl/maps/BvxhZeSiPygT5gTq9" class="buttonLink">
-                                Address
+                            <a href="/assets/VBcard Pricelist.pdf" download="pricelist" class="buttonLink">
+                                Pricelist
                             </a>
-                        </button>
+                        </div>
                     </div>
-                    <br>
-                    <br>
-                    <br>
-                    <div class="socialIcon">
 
-                        <a href="https://api.whatsapp.com/send?phone=+27828206428" >
-                            <img src="/assets/Whatsapp Icon.png" alt="whatsapp" width="45px" height="45px">
-                        </a>
-
-                        <a href="https://www.facebook.com/fwattorneys">
-                            <img src="/assets/Facebook Icon.png" alt="facebook" width="45px" height="45px">
-                        </a>
+                    <div class="image">
+                        <img src="/assets/Phone-card-mockup.png" alt="" width="80%">
                     </div>
                 </div>
+                <div class="socialIcon">
+
+                    <a href="" >
+                        <img src="/assets/Facebook Icon.png" alt="facebook" width="45px" height="45px">
+                    </a>
+
+                    <a href="">
+                        <img src="/assets/Instagram Icon.png" alt="instagram" width="45px" height="45px">
+                    </a>
+
+                    <a href="">
+                        <img src="/assets/Whatsapp Icon.png" alt="whatsapp" width="45px" height="45px">
+                    </a>
+                </div>
+                <footer>
+                    <h6>
+                        Powered by vbcard.mobi
+                    </h6>
+                </footer>
 
             </div>
         </div>
-
-        <footer>
-            <h6>
-                Powered by vbcard.mobi
-            </h6>
-        </footer>
-
+          
         <script>
             (function(){
                 const makeVCardVersion = () => `VERSION:3.0`;
@@ -148,12 +146,13 @@
                 }
         
                 // create one of these per contact
-                document.getElementById("saveFiona").addEventListener("click", () => {
+                document.getElementById("saveJanneke").addEventListener("click", () => {
                     const contact = {
-                        name: "Fiona Williamson",
-                        phone: "+27 82 820 6428",
-                        email: "fiona@fwlaw.co.za",
-                        url: "https://vbcard.mobi/fiona-williamson-attorney"
+                        name: "Janneke Nel",
+                        org: "Vita Creations, Owner",
+                        phone: "+27 71 473 5834",
+                        email: "info@vbcard.mobi",
+                        url: "https://vbcard.mobi/janneke"
                     };
         
                     createVCard(contact)

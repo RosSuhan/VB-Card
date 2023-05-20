@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Lewende Woord Hartenbos
+        </title>
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=5.0, width=device-width" />
+
+        <link href="/assets/Fav icon/favicon.ico" rel="shortcut icon" />
+
+        <link rel="stylesheet" type="text/css" href="/profiles/lewende-woord-hartenbos/style/lwh.css" />
+
+
+    </head>
+    <body>
+        <div class="background">
+            <div class="bodyCover">
+                <header class="header">
+                    <img src="/profiles/lewende-woord-hartenbos/assets/Zuleika.jpg" alt="welkom by lewende-woord-hartenbos" class="logo">
+                    <p class="bio">
+                        “For we are God's masterpiece. He has created us anew in Christ Jesus, so we can do the good things he planned for us long ago.” Ephesians 2:10 NLT
+                    </p>
+                </header>
+
+                <div>              
+                    <div class="socialIcon">
+
+                        <a href="https://www.facebook.com/saltandlight.creations" >
+                            <img src="/assets/Facebook Icon.png" alt="lewende-woord-hartenbos facebook" width="45px" height="45px">
+                        </a>
+
+                        <a href="https://youtube.com/@lewendewoordhartenbos5747">
+                            <img src="/assets/YouTube Icon.png" alt="lewende-woord-hartenbos youtube channel" width="45px" height="45px">
+                        </a>
+
+                        <a href="https://instagram.com/lewendewoordhartenbos/">
+                            <img src="/assets/Instagram Icon.png" alt="lewende-woord-hartenbos instagram channel" width="45px" height="45px">
+                        </a>
+
+                        <a href="https://api.whatsapp.com/send?phone=+27615308689">
+                            <img src="/assets/Whatsapp Icon.png" alt="lewende-woord-hartenbos whatsapp" width="45px" height="45px">
+                        </a>
+                    </div>
+
+                    <!--button to website-->
+                    <div class="button">
+                        <div class="webButton">
+                            <a href="https://lewendewoordhartenbos.co.za/" class="buttonLink">
+                                Besoek ons webtuiste!
+                            </a>
+                        </div>
+                        <br>
+                        <details>
+                            <summary>
+                                Kontak Zuleika du Toit
+                            </summary>
+                            <h3>
+                                Zuleika du Toit
+                            </h3>
+                            <div>
+                                <a href="tel:+27718695516">
+                                    071 869 5516
+                                </a>
+                            </div>
+                            <br>
+                            <div>
+                                <a href="mailto:zuleika@lewendewoord.co.za">
+                                    zuleika@lewendewoord.co.za
+                                </a>
+                            </div>
+                            
+                            <div>
+                                <a href="https://www.google.com/maps/dir/-33.9798286,22.4410671/1+Lofty+Nel+St,+Die+Voorbaai,+Mossel+Bay,+6520/@-34.0631471,22.1328264,11z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x1dd6691ed581773f:0xaefd11abb72fcfa1!2m2!1d22.1010933!2d-34.1423183">
+                                    1 Lofty Nel, Voorbaai Mossel Bay
+                                </a>
+                            </div>
+                            <p>
+                                Maandag tot Donderdag 07h30 - 15h00
+                            </p>
+                            <p>
+                                Sunday Service - 09h00
+                            </p>
+                            <br>
+                            <button class="saveButton" id="saveZuleika">
+                                Stoor Kontak Besonderhede
+                            </button>
+                        </details>
+                        <br>
+                        <details>
+                            <summary>
+                                Laat ons jou kontak
+                            </summary>
+                            <div>
+                                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScGD-nyVM5yt3KhtXOQw6BCf_3v9uH9N606QiiSTvcXJBSBDg/viewform?usp=sf_link" frameborder="0"></iframe>
+                            </div>
+                        </details>
+                        <br>
+                        <details>
+                            <summary>
+                                Offergawe Bank Besonderhede
+                            </summary>
+
+                            <h2>
+                                Bank Besonderhede:
+                            </h2>
+
+                            <p>
+                                LEWENDE WOORD HARTENBOS<br>ABSA<br>TJEK REKENING<br>409 928 3740
+                            </p>
+                            <div>
+                                <a href="https://pos.snapscan.io/qr/L6CGS6Lv">
+                                Snapscan
+                                </a>
+                            </div>
+                        </details>
+                    </div>              
+                </div>
+            </div>
+        </div>
+        <script>
+            (function(){
+                const makeVCardVersion = () => `VERSION:3.0`;
+                const makeVCardName = (name) => `FN:${name}`;
+                const makeVCardOrg = (org) => `ORG:${org}`;
+                const makeVCardTitle = (title) => `TITLE:${title}`;
+                const makeVCardTel = (phone) => `TEL;TYPE=WORK,VOICE:${phone}`;
+                const makeVCardAdr = (address) => `ADR;TYPE=WORK,PREF:;;${address}`;
+                const makeVCardEmail = (email) => `EMAIL:${email}`;
+                const makeVCardURL = (url) => `URL:${url}`;
+                const makeVCardTimeStamp = () => `REV:${new Date().toISOString()}`;
+        
+        
+        function makeVCard({ name, org, title, phone, address, email, url }) {
+        const vCard = `BEGIN:VCARD
+        ${makeVCardVersion()}
+        ${makeVCardName(name)}
+        ${makeVCardOrg(org)}
+        ${makeVCardTitle(title)}
+        ${makeVCardTel(phone)}
+        ${makeVCardAdr(address)}
+        ${makeVCardEmail(email)}
+        ${makeVCardURL(url)}
+        ${makeVCardTimeStamp()}
+        END:VCARD`;
+        
+        return vCard;
+        }
+        
+        
+                function createVCard(contact){
+                    const newLink = document.createElement('a');
+                    const vcard = makeVCard(contact)
+                    const blob = new Blob([vcard], { type: "text/vcard" });
+        
+                    newLink.href = URL.createObjectURL(blob);
+                    newLink.download = `${contact.name}_vcard.vcf`;
+                    newLink.click();
+        
+                    URL.revokeObjectURL(newLink.href);
+                }
+        
+                // create one of these per contact
+                document.getElementById("saveZuleika").addEventListener("click", () => {
+                    const contact = {
+                        name: "Zuleika du Toit",
+                        org: "Lewende Woord Hartenbos",
+                        phone: "+27 71 869 5516",
+                        email: "zuleika@lewendewoord.co.za",
+                        url: "https://vbcard.mobi/lewende-woord-zuleika"
+                    };
+        
+                    createVCard(contact)
+                });
+            }())
+        </script>
+    </body>
+</html>

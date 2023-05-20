@@ -103,7 +103,7 @@ a{
 }
 
 .webButton{
-  width: 370px;
+  width: 360px;
   background-color: #3FA79D;
   border: none;
   box-shadow: none;
@@ -168,7 +168,7 @@ details > summary {
   color: transparent;
 }
 
-details[open] > p, a {
+details[open] > p, a, div {
   border-radius: 0;
   background-color: transparent;
   margin: 10px;

@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>
-            Templet name
+            Physique Science
         </title>
 
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
@@ -25,10 +25,10 @@
                 <header>
                     <img src="/profiles/physique-science/assets/Physique Science logo.jpeg" alt="salt and light logo" width="221px" height="221px" class="logo">
                 </header>
-
-                <div>
-                    
-
+                <div class="spacer">
+                    <h4>spacer</h4>
+                </div>
+                <div>       
                     <div class="socialIcon">
 
                         <a href="https://api.whatsapp.com/send?phone=+27837497638">
@@ -44,6 +44,9 @@
                         </a>
                     </div>
                 </div>
+                <div class="spacer">
+                    <h4>spacer</h4>
+                </div>
                 <div class="content">
                     <!--button to website-->
                     <div class="button">
@@ -53,34 +56,36 @@
                             </a>
                         </button>
                     </div>
-                
+                    <br>
                     <!--button to contact-->
-                    <div class="button">
+                    <div class="buttonDetail">
                         <details>
                             <summary>
                                 Contact Stefan
                             </summary>
-                            <p>
+                            <h3>
                                 Stefan Wait
-                            </p>
+                            </h3>
                             <div>
                                 <a href="tel:+27837497638">
                                     083 749 7638
                                 </a>
                             </div>
+                            <br>
                             <div>
                                 <a href="mailto:wait.stefan@gmail.com">
                                     wait.stefan@gmail.com
                                 </a>
                             </div>
+                            <br>
                             <button class="saveButton" id="saveStefan">
                                 Save To Contacts
                             </button>
                         </details>
                     </div>
-
+                    <br>
                     <!--button to pryslist-->
-                    <div class="button">
+                    <div class="buttonDetail">
                         <details>
                             <summary>
                                 Our Mission
@@ -99,6 +104,71 @@
                     </div>                                    
                 </div>
             </div>
+            <div class="spacer">
+                <h4>spacer</h4>
+            </div>
         </div>
+        
+        <footer>
+            <h6>
+                Powered by vbcard.mobi
+            </h6>
+        </footer>
+        <script>
+            (function(){
+                const makeVCardVersion = () => `VERSION:3.0`;
+                const makeVCardName = (name) => `FN:${name}`;
+                const makeVCardOrg = (org) => `ORG:${org}`;
+                const makeVCardTitle = (title) => `TITLE:${title}`;
+                const makeVCardTel = (phone) => `TEL;TYPE=WORK,VOICE:${phone}`;
+                const makeVCardAdr = (address) => `ADR;TYPE=WORK,PREF:;;${address}`;
+                const makeVCardEmail = (email) => `EMAIL:${email}`;
+                const makeVCardURL = (url) => `URL:${url}`;
+                const makeVCardTimeStamp = () => `REV:${new Date().toISOString()}`;
+        
+        
+        function makeVCard({ name, org, title, phone, address, email, url }) {
+        const vCard = `BEGIN:VCARD
+        ${makeVCardVersion()}
+        ${makeVCardName(name)}
+        ${makeVCardOrg(org)}
+        ${makeVCardTitle(title)}
+        ${makeVCardTel(phone)}
+        ${makeVCardAdr(address)}
+        ${makeVCardEmail(email)}
+        ${makeVCardURL(url)}
+        ${makeVCardTimeStamp()}
+        END:VCARD`;
+        
+        return vCard;
+        }
+        
+        
+                function createVCard(contact){
+                    const newLink = document.createElement('a');
+                    const vcard = makeVCard(contact)
+                    const blob = new Blob([vcard], { type: "text/vcard" });
+        
+                    newLink.href = URL.createObjectURL(blob);
+                    newLink.download = `${contact.name}_vcard.vcf`;
+                    newLink.click();
+        
+                    URL.revokeObjectURL(newLink.href);
+                }
+        
+                // create one of these per contact
+                document.getElementById("saveStefan").addEventListener("click", () => {
+                    const contact = {
+                        name: "Stefan Wait",
+                        org: "Physique Science",
+                        phone: "+27 083 749 7638",
+                        email: "wait.stefan@gmail.com",
+                        url: "https://vbcard.mobi/physique-science"
+                    };
+        
+                    createVCard(contact)
+                });
+            }())
+        </script>
     </body>
 </html>
