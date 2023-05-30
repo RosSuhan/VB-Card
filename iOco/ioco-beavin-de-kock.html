@@ -1,0 +1,217 @@
+<head>
+    <title>iOCO Beavin de Kock</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=5.0, width=device-width" />
+
+    <link href="/assets/Fav icon/favicon.ico" rel="shortcut icon" />
+
+    <link rel="stylesheet" type="text/css" href="/iOco/ioco.css" />
+
+
+</head>
+<body>
+
+    <div class="bodyCover">
+        <header class="header">
+            <div class="logoBlock">
+                <img src="/iOco/assets/iOCO_Logo_Mid Morning.jpg" alt="logo" class="logo">
+            </div>
+
+            <div>
+                <h1>Beavin de Kock</h1>
+            </div>
+
+            <div>
+                <h3 class="position">Divisional Executive</h3>
+            </div>
+        </header>
+
+
+        <div class="content">
+            <div class="contentBlock">
+                
+                <div class="buttonBlock">
+                    <div class="button">
+                        <div class="">
+                            <li>
+                                <a href="https://www.ioco.tech/" class="buttonLink">
+                                    Website
+                                </a>
+                            </li>
+                        </div>
+                    </div>
+                </div>
+             
+                <div class="buttonBlock">
+                    <div class="">
+                        <details>
+                            <summary class="">
+                                Contact Beavin de Kock
+                            </summary>
+        
+                            <div class="section">
+                                <h2>
+                                    Beavin de Kock
+                                </h2>
+                            
+                                <div>
+                                    <a href="tel:+27844997668">
+                                        084 499 7668
+                                    </a>
+                                </div>
+                                <br>
+                                <div>
+                                    <a href="mailto:Beavin.De@iOCO.tech">
+                                        Beavin.De@iOCO.tech
+                                    </a>
+                                </div>
+                                <br>
+                                <div>
+                                    <a href="https://www.linkedin.com/in/beavin-de-kock-88666012">
+                                        LinkedIn Profile
+                                    </a>
+                                </div>
+                                <br>
+                                <div class="saveBlock">
+                                    <button class="saveButton" id="saveBeavin">
+                                        Save To Contacts
+                                    </button>
+                                </div>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+             
+                <div class="buttonBlock">
+                    <div class="button">
+                        <li>
+                            <a href="" class="buttonLink">
+                                Quality Assurance
+                            </a>
+                        </li>
+                    </div>
+                </div>
+           
+                <div class="buttonBlock">
+                    <div class="">
+                        <details>
+                            <summary>
+                                Let Us Get Back To You
+                            </summary>
+        
+                            <a href="" download="pdf">
+                                <img src="" alt="" width="80%">
+                            </a>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </div>
+                <!--Share button-->
+        <div class="socialArea">
+            <div class="socialBlock">
+
+                <div class="socialIcon">
+                    <div class="icon">
+                        <a href="https://www.facebook.com/iOCO.Tech/" >
+                            <img src="/iOco/assets/facebook icon.png" alt="facebook" width="45px" height="45px">
+                        </a>
+                    </div>
+    
+                    <div class="icon">
+                        <a href="https://www.linkedin.com/company/ioco/">
+                            <img src="/iOco/assets/LinkedIn Icon.png" alt="linkedin" width="45px" height="45px">
+                        </a>
+                    </div>
+                    
+                    <div class="icon">
+                        <a href="https://open.spotify.com/show/5IkbEcZXblStT4OcoEYrQr?si=unv88mjJTq6CofJigae3Wg&nd=1">
+                            <img src="/iOco/assets/spotify icon.png" alt="spotify" width="80%">
+                        </a>
+                    </div>
+                
+                    <div class="icon">
+                        <a href="https://twitter.com/iOCO_Tech">
+                            <img src="/iOco/assets/twitter icon.png" alt="instagram" width="45px" height="45px">
+                        </a>
+                    </div>
+    
+                    <div class="icon">
+                        <a href="https://www.youtube.com/c/iOCOTech">
+                            <img src="/iOco/assets/youtube icon.png" alt="youtube" width="80%">
+                        </a>
+                    </div class="icon">
+                    
+    
+                    <div class="icon">
+                        <a href="{whatsapp}">
+                            <img src="/assets/Whatsapp Icon.png" alt="whatsapp" width="45px" height="45px">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function(){
+            const makeVCardVersion = () => `VERSION:3.0`;
+            const makeVCardName = (name) => `FN:${name}`;
+            const makeVCardOrg = (org) => `ORG:${org}`;
+            const makeVCardTitle = (title) => `TITLE:${title}`;
+            const makeVCardTel = (phone) => `TEL;TYPE=WORK,VOICE:${phone}`;
+            const makeVCardAdr = (address) => `ADR;TYPE=WORK,PREF:;;${address}`;
+            const makeVCardEmail = (email) => `EMAIL:${email}`;
+            const makeVCardURL = (url) => `URL:${url}`;
+            const makeVCardTimeStamp = () => `REV:${new Date().toISOString()}`;
+    
+    
+    function makeVCard({ name, org, title, phone, address, email, url }) {
+    const vCard = `BEGIN:VCARD
+    ${makeVCardVersion()}
+    ${makeVCardName(name)}
+    ${makeVCardOrg(org)}
+    ${makeVCardTitle(title)}
+    ${makeVCardTel(phone)}
+    ${makeVCardAdr(address)}
+    ${makeVCardEmail(email)}
+    ${makeVCardURL(url)}
+    ${makeVCardTimeStamp()}
+    END:VCARD`;
+    
+    return vCard;
+    }
+    
+    
+            function createVCard(contact){
+                const newLink = document.createElement('a');
+                const vcard = makeVCard(contact)
+                const blob = new Blob([vcard], { type: "text/vcard" });
+    
+                newLink.href = URL.createObjectURL(blob);
+                newLink.download = `${contact.name}_vcard.vcf`;
+                newLink.click();
+    
+                URL.revokeObjectURL(newLink.href);
+            }
+    
+            // create one of these per contact
+            document.getElementById("saveBeavin").addEventListener("click", () => {
+                const contact = {
+                    name: "Beavin de Kock",
+                    title: "Divisional Executive",
+                    org: "iOCO",
+                    phone: "+27 84 499 7668",
+                    email: "Beavin.De@iOCO.tech",
+                    url: "https://www.linkedin.com/in/beavin-de-kock-88666012"
+                };
+    
+                createVCard(contact)
+            });
+        }())
+    </script>
+</body>
