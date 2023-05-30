@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>
-            Business Finder - Rosalyn van Zyl
+            Business Finder - La Familia Barista Academy
         </title>
 
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
@@ -11,11 +11,9 @@
 
         <meta name="viewport" content="initial-scale=1.0, maximum-scale=5.0, width=device-width" />
 
-        <meta http-equiv="refresh" content="7; url='https://rosalyn-van-zyl-business-finder/'" />
-
         <link href="/assets/Fav icon/favicon.ico" rel="shortcut icon" />
 
-        <link rel="stylesheet" type="text/css" href="/style/businessFinder.css" />
+        <link rel="stylesheet" type="text/css" href="/businessFinder/businessFinder.css" />
 
 
     </head>
@@ -26,75 +24,62 @@
             <div class="bodyCover">
                 <div class="intro">
                     <header class="header">
-                        <img src="/assets/Business Finder Logo.png" alt="vb card logo" class="logo">
+                        <img src="/businessFinder/assets/La Familia Barista Academy.png" alt="logo" class="logo">
                     </header>
                     <h1 class="name">
-                        The Business Finder
+                        La Familia Barista Academy
                     </h1>
                 </div>
 
                 <div class="content">
-                    <div class="button">
-                        <details>
-                            <summary>
-                                Contact Rosalyn van Zyl
-                            </summary>
-                            <h3>
-                                Rosalyn van Zyl
-                            </h3>
-                            <br>
-                            <div>
-                                <a href="tel:+27720800499">
-                                    072 080 0499
-                                </a>
-                            </div>
-                            <br>
-                            <div>
-                                <a href="mailto:marketing@thebusinessfinder.co.za">
-                                    marketing@thebusinessfinder.co.za
-                                </a>
-                            </div>
-                            <br>
-                            <button class="saveButton" id="saveRos">
-                                Save To Contacts
-                            </button>
-                        </details>
-                    </div>
-
-
-                    <div class="button">
-                        <div class="webButton">
-                            <a href="https://thebusinessfinder.co.za" class="buttonLink">
-                                Website
+                    
+                    <details>
+                        <summary>
+                            Contact Phoka Lesuthu
+                        </summary>
+                        <h3>
+                            Phoka Lesuthu
+                        </h3>
+                        <br>
+                        <div>
+                            <a href="tel:+27603259401">
+                                060 325 9401
                             </a>
                         </div>
-                    </div>
-
-                    <div class="button">
-                        <div class="webButton">
-                            <a href="/assets/Price list 2022 2023.pdf" download="pricelist" class="buttonLink">
-                                Pricelist
+                        <br>
+                        <div>
+                            <a href="mailto:michaellesuthu@gmail.com">
+                                michaellesuthu@gmail.com
                             </a>
                         </div>
+                        <br>
+                        <button class="saveButton" id="savePhoka">
+                            Save To Contacts
+                        </button>
+                    </details>
+
+                    <div class="webButton">
+                        <a href="https://thebusinessfinder.co.za/bn/la-familia-barista-academy/" class="buttonLink">
+                            Website
+                        </a>
                     </div>
 
-                    <div class="button">
-                        <div class="webButton">
-                            <a href="https://chat.whatsapp.com/Hbkn1CuRnThLRKTKxo54vS" class="buttonLink">
-                                Join our Whatsapp Group
-                            </a>
-                        </div>
+
+                    <div class="webButton">
+                        <a href="https://chat.whatsapp.com/Hbkn1CuRnThLRKTKxo54vS" class="buttonLink">
+                            Join our Whatsapp Group
+                        </a>
                     </div>
+
                 </div>
                 <div class="socialIcon">
 
                     <a href="https://web.facebook.com/thebusinessfinder" >
-                        <img src="/assets/Facebook Icon.png" alt="salt and light facebook" width="45px" height="45px">
+                        <img src="/assets/Facebook Icon.png" alt="facebook" width="45px" height="45px">
                     </a>
 
-
                     <a href="https://api.whatsapp.com/send/?phone=27720800499&text&type=phone_number&app_absent=0">
-                        <img src="/assets/Whatsapp Icon.png" alt="salt and light whatsapp" width="45px" height="45px">
+                        <img src="/assets/Whatsapp Icon.png" alt="whatsapp" width="45px" height="45px">
                     </a>
                 </div>
                 <footer>
@@ -158,13 +143,13 @@ return vCard;
                 }
 
                 // create one of these per contact
-                document.getElementById("saveRos").addEventListener("click", () => {
+                document.getElementById("savePhoka").addEventListener("click", () => {
                     const contact = {
-                        name: "Rosalyn van Zyl",
-                        org: "The Business Finder",
-                        phone: "+27 72 080 0499",
-                        email: "marketing@thebusinessfinder.co.za",
-                        url: "https://vbcard.mobi/rosalyn-van-zyl-business-finder"
+                        name: "Phoka Lesuthu",
+                        org: "La Familia Barista Academy",
+                        phone: "+27 60 325 9401",
+                        email: "michaellesuthu@gmail.com",
+                        url: "https://vbcard.mobi/laFamiliaBarista"
                     };
 
                     createVCard(contact)

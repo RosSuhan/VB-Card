@@ -1,0 +1,236 @@
+body{
+    background-image: url(/iOco/assets/ioco-website-banner.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    align-items: center;
+    align-content: center;
+    margin: 0;
+}
+
+.bodyCover{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;    
+    align-items: center;
+    align-content: space-evenly;
+    align-self: center;
+    height: 100%;
+    margin: 0;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    padding: 20px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.logoBlock{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    align-items: center;
+    align-content: center;
+}
+
+.logo{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    align-items: center;
+    align-content: center;
+    align-self: center;
+}
+
+h1{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: -3px;
+    color: #F6BE00;
+}
+
+.position{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: bold;
+    font-weight: 38px;
+    color: #F6BE00;
+}
+
+
+
+.content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;    
+    align-items: center;
+    align-content: center;
+    align-self: center;
+}
+
+.contentBlock{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;    
+    align-items: center;
+    align-content: center;
+    align-self: center;
+}
+
+.buttonBlock{
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.button{
+    background-color:  #6cb2b0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 25px;
+    font-weight: 200;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    text-indent: 30px;
+}
+
+.buttonLink{
+    color: white;
+    width: 100%;
+}
+
+.button[hover]{
+    background-color:  #6cc1b8;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 25px;
+    font-weight: 200;
+    color: white;
+}
+
+
+
+details > summary {
+    background-color:  #6cb2b0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 25px;
+    font-weight: 200;
+    color: white;    
+    text-indent: 30px;
+}
+
+
+::marker {
+    content: none;
+    color: transparent;
+}
+
+details[open] > .section {
+    text-indent: 20%;
+    background-color: white;
+    border-left: black solid 1px;
+    border-right: black solid 1px;
+    border-bottom: black solid 1px;
+    border-top: black solid 1px;
+    padding-bottom: 4%;
+}
+
+details[open] > summary {
+    background-color:  #6cc1b8;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 25px;
+    font-weight: 200;
+    color: white;    
+    text-indent: 30px;
+}
+
+.socialArea{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.socialBlock{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.socialIcon{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon{
+    width: 30%;
+    row-gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.saveBlock{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.saveButton{
+    background-color:  #6cb2b0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 25px;
+    font-weight: 200;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    text-indent: 30px;
+    border: none;
+}

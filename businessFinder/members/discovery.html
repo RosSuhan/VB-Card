@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Business Finder - Edna Groenewald
+        </title>
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=5.0, width=device-width" />
+
+        <link href="/assets/Fav icon/favicon.ico" rel="shortcut icon" />
+
+        <link rel="stylesheet" type="text/css" href="/businessFinder/businessFinder.css" />
+
+
+    </head>
+    <body>
+
+        <div class="background">
+
+            <div class="bodyCover">
+                <div class="intro">
+                    <header class="header">
+                        <img src="/businessFinder/assets/Discovery.png" alt="logo" class="logo">
+                    </header>
+                    <h1 class="name">
+                        Discovery
+                    </h1>
+                </div>
+
+                <div class="content">
+                    
+                    <details>
+                        <summary>
+                            Contact Edna Groenewald
+                        </summary>
+                        <h3>
+                            Edna Groenewald
+                        </h3>
+                        <br>
+                        <div>
+                            <a href="tel:+27827858610">
+                                082 785 8610
+                            </a>
+                        </div>
+                        <br>
+                        <div>
+                            <a href="mailto:ednag@discovery.co.za">
+                                ednag@discovery.co.za
+                            </a>
+                        </div>
+                        <br>
+                        <button class="saveButton" id="saveEdna">
+                            Save To Contacts
+                        </button>
+                    </details>
+                    
+                    <details>
+                        <summary>
+                            Contact Louis Groenewald
+                        </summary>
+                        <h3>
+                            Louis Groenewald
+                        </h3>
+                        <br>
+                        <div>
+                            <a href="tel:+27825500764">
+                                082 550 0764
+                            </a>
+                        </div>
+                        <br>
+                        <div>
+                            <a href="mailto:louisg@discovery.co.za">
+                                louisg@discovery.co.za
+                            </a>
+                        </div>
+                        <br>
+                        <button class="saveButton" id="saveLsg">
+                            Save To Contacts
+                        </button>
+                    </details>
+
+                    <div class="webButton">
+                        <a href="https://thebusinessfinder.co.za/bn/discovery/" class="buttonLink">
+                            Website
+                        </a>
+                    </div>
+
+
+                    <div class="webButton">
+                        <a href="https://chat.whatsapp.com/Hbkn1CuRnThLRKTKxo54vS" class="buttonLink">
+                            Join our Whatsapp Group
+                        </a>
+                    </div>
+
+                </div>
+                <div class="socialIcon">
+
+                    <a href="https://web.facebook.com/thebusinessfinder" >
+                        <img src="/assets/Facebook Icon.png" alt="facebook" width="45px" height="45px">
+                    </a>
+
+                    <a href="https://api.whatsapp.com/send/?phone=27720800499&text&type=phone_number&app_absent=0">
+                        <img src="/assets/Whatsapp Icon.png" alt="whatsapp" width="45px" height="45px">
+                    </a>
+                </div>
+                <footer>
+                    <h6>
+                        Powered by vbcard.mobi
+                    </h6>
+                </footer>
+
+            </div>
+        </div>
+        <script>
+            details.addEventListener("toggle", (event) => {
+          if (details.open) {
+          /* the element was toggled open */
+          } else {
+          /* the element was toggled closed */
+          }
+          });
+          </script>
+          
+          <script>
+            (function(){
+                const makeVCardVersion = () => `VERSION:3.0`;
+                const makeVCardName = (name) => `FN:${name}`;
+                const makeVCardOrg = (org) => `ORG:${org}`;
+                const makeVCardTitle = (title) => `TITLE:${title}`;
+                const makeVCardTel = (phone) => `TEL;TYPE=WORK,VOICE:${phone}`;
+                const makeVCardAdr = (address) => `ADR;TYPE=WORK,PREF:;;${address}`;
+                const makeVCardEmail = (email) => `EMAIL:${email}`;
+                const makeVCardURL = (url) => `URL:${url}`;
+                const makeVCardTimeStamp = () => `REV:${new Date().toISOString()}`;
+
+
+function makeVCard({ name, org, title, phone, address, email, url }) {
+const vCard = `BEGIN:VCARD
+${makeVCardVersion()}
+${makeVCardName(name)}
+${makeVCardOrg(org)}
+${makeVCardTitle(title)}
+${makeVCardTel(phone)}
+${makeVCardAdr(address)}
+${makeVCardEmail(email)}
+${makeVCardURL(url)}
+${makeVCardTimeStamp()}
+END:VCARD`;
+
+return vCard;
+}
+
+
+                function createVCard(contact){
+                    const newLink = document.createElement('a');
+                    const vcard = makeVCard(contact)
+                    const blob = new Blob([vcard], { type: "text/vcard" });
+
+                    newLink.href = URL.createObjectURL(blob);
+                    newLink.download = `${contact.name}_vcard.vcf`;
+                    newLink.click();
+
+                    URL.revokeObjectURL(newLink.href);
+                }
+
+                // create one of these per contact
+                document.getElementById("saveEdna").addEventListener("click", () => {
+                    const contact = {
+                        name: "Edna Groenewald",
+                        org: "Discovery",
+                        phone: "+27 82 785 8610",
+                        email: "ednag@discovery.co.za",
+                        url: "https://vbcard.mobi/discovery"
+                    };
+
+                    createVCard(contact)
+                });
+
+                
+                // create one of these per contact
+                document.getElementById("saveLsg").addEventListener("click", () => {
+                    const contact = {
+                        name: "Louis Groenewald",
+                        org: "Discovery",
+                        phone: "+27 82 550 0764",
+                        email: "louisg@discovery.co.za",
+                        url: "https://vbcard.mobi/discovery"
+                    };
+
+                    createVCard(contact)
+                });
+
+            }())
+        </script>
+    </body>
+</html>
