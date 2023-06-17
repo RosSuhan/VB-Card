@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Zandla Zonyazi
+        </title>
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=5.0, width=device-width" />
+
+        <link href="/assets/Fav icon/favicon.ico" rel="shortcut icon" />
+
+        <link rel="stylesheet" type="text/css" href="/profiles/profilestyles/zz.css" />
+
+
+    </head>
+    <body>
+
+        <div class="background">
+
+            <div class="bodyCover">
+                <header class="header">
+                    <img src="/profiles/zandla-zonyazi/assets/Zandla Zonyazi Logo.png" alt="zandla zonyazi logo" class="logo">
+                </header>
+                <h1 class="name">
+                    Mandisi Mabaso
+                </h1>
+
+                <!--social links to be added here-->
+
+                <div class="content"><!--button to website-->
+
+                    <div class="button">
+                        <div class="webButton">
+                            <a href="https://zandlazonyazi.co.za/" class="buttonLink">
+                                Website
+                            </a>
+                        </div>
+                    </div>
+                    <br>
+                    <!--button to contact-->
+                    <div class="button">
+                        <details>
+                            <summary>
+                                Contact Mandisi
+                            </summary>
+                            <h3>
+                                Mandisi Mabaso
+                            </h3>
+                            <div>
+                                <a href="tel:+27636838998">
+                                    063 683 8998
+                                </a>
+                            </div>
+                            <br>
+                            <div>
+                                <a href="mailto:info@zandlazonyazi.co.za">
+                                    info@zandlazonyazi.co.za
+                                </a>
+                            </div>
+                            <br>
+                            <address>
+                                Plot 106 R114 Eastbound, Laezonia AH, 
+                                Centurion, 
+                                0157
+                            </address>
+                            <br>
+                            <button class="saveButton" id="saveZz">
+                                Save To Contacts
+                            </button>
+                        </details>
+                    </div>
+                    <br>
+                    <!--button to pryslist-->
+                    <div class="button">
+                        <div class="webButton">
+                            <a href="/profiles/zandla-zonyazi/assets/ZZ Company Profile Digital small.pdf" download="profile" class="buttonLink">
+                                Company Profile
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <script>
+            (function(){
+                const makeVCardVersion = () => `VERSION:3.0`;
+                const makeVCardName = (name) => `FN:${name}`;
+                const makeVCardOrg = (org) => `ORG:${org}`;
+                const makeVCardTitle = (title) => `TITLE:${title}`;
+                const makeVCardTel = (phone) => `TEL;TYPE=WORK,VOICE:${phone}`;
+                const makeVCardAdr = (address) => `ADR;TYPE=WORK,PREF:;;${address}`;
+                const makeVCardEmail = (email) => `EMAIL:${email}`;
+                const makeVCardURL = (url) => `URL:${url}`;
+                const makeVCardTimeStamp = () => `REV:${new Date().toISOString()}`;
+        
+        
+        function makeVCard({ name, org, title, phone, address, email, url }) {
+        const vCard = `BEGIN:VCARD
+        ${makeVCardVersion()}
+        ${makeVCardName(name)}
+        ${makeVCardOrg(org)}
+        ${makeVCardTitle(title)}
+        ${makeVCardTel(phone)}
+        ${makeVCardAdr(address)}
+        ${makeVCardEmail(email)}
+        ${makeVCardURL(url)}
+        ${makeVCardTimeStamp()}
+        END:VCARD`;
+        
+        return vCard;
+        }
+        
+        
+                function createVCard(contact){
+                    const newLink = document.createElement('a');
+                    const vcard = makeVCard(contact)
+                    const blob = new Blob([vcard], { type: "text/vcard" });
+        
+                    newLink.href = URL.createObjectURL(blob);
+                    newLink.download = `${contact.name}_vcard.vcf`;
+                    newLink.click();
+        
+                    URL.revokeObjectURL(newLink.href);
+                }
+        
+                // create one of these per contact
+                document.getElementById("saveZz").addEventListener("click", () => {
+                    const contact = {
+                        name: "Mandisi Mabaso",
+                        org: "Zandla Zonyazi",
+                        phone: "+27 63 683 8998",
+                        email: "info@zandlazonyazi.co.za",
+                        url: "https://vbcard.mobi/zandla-zonyazi/"
+                    };
+        
+                    createVCard(contact)
+                });
+            }())
+        </script>
+    </body>
+</html>

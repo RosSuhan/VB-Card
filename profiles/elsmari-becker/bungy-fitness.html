@@ -1,0 +1,146 @@
+<head>
+    <title>Bungee Fitness</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=5.0, width=device-width" />
+
+    <link href="/assets/Fav icon/favicon.ico" rel="shortcut icon" />
+
+    <link rel="stylesheet" type="text/css" href="/profiles/profilestyles/bungy.css" />
+
+
+</head>
+<body>
+
+    <div class="background">
+
+        <div class="bodyCover">
+            <header class="header">
+                <img src="/profiles/elsmari-becker/assets/Bungee Profile logo.jpg" alt="logo" class="logo">
+            </header>
+
+            
+            <h1 class="name">Bungee Fitness</h1>
+        
+            <div class="content">
+                <div class="button">
+                    <details>
+                        <summary class="">
+                            Contact Elzmari Bekker
+                        </summary>
+
+                        <div class="detailContent">
+                            <h2>
+                                Elzmari Bekker
+                            </h2>
+                        
+                            <a href="tel:+27793470274" class="detailLink">
+                                079 347 0274
+                            </a>
+
+                            <a href="mailto:bungeefitnessmby@gmail.com" class="detailLink">
+                                bungeefitnessmby@gmail.com
+                            </a>
+                        
+                            <p class="detailLink">
+                                Dias Hotel and Resort
+                            </p>
+
+                            <button class="saveButton">
+                                Save to Contacts
+                            </button>
+                        </div>
+
+                        
+                    </details>
+
+                    <details>
+                        <summary>
+                            Let Us Get Back To You
+                        </summary>
+
+                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeBDbiJ56_4ScR-6PfpJGVb8LBeOnvRJbJ0VZcwltiatv4tsA/viewform?usp=sf_link" frameborder="0"></iframe>
+                    </details>
+                </div>
+            <div>
+
+                <div>
+                    <h6 style="color: transparent">Spacer</h6>
+                </div>
+
+                    <!--Share button-->
+            <div class="share">
+                <div class="socialIcon">
+
+                    <a href="https://web.facebook.com/BungeeFitnessMosselBay" >
+                        <img src="/assets/Facebook Icon.png" alt="facebook" width="45px" height="45px">
+                    </a>
+
+                    <a href="https://api.whatsapp.com/send/?phone=27793470274&text&type=phone_number&app_absent=0">
+                        <img src="/assets/Whatsapp Icon.png" alt="whatsapp" width="45px" height="45px">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function(){
+            const makeVCardVersion = () => `VERSION:3.0`;
+            const makeVCardName = (name) => `FN:${name}`;
+            const makeVCardOrg = (org) => `ORG:${org}`;
+            const makeVCardTitle = (title) => `TITLE:${title}`;
+            const makeVCardTel = (phone) => `TEL;TYPE=WORK,VOICE:${phone}`;
+            const makeVCardAdr = (address) => `ADR;TYPE=WORK,PREF:;;${address}`;
+            const makeVCardEmail = (email) => `EMAIL:${email}`;
+            const makeVCardURL = (url) => `URL:${url}`;
+            const makeVCardTimeStamp = () => `REV:${new Date().toISOString()}`;
+    
+    
+function makeVCard({ name, org, title, phone, address, email, url }) {
+const vCard = `BEGIN:VCARD
+${makeVCardVersion()}
+${makeVCardName(name)}
+${makeVCardOrg(org)}
+${makeVCardTitle(title)}
+${makeVCardTel(phone)}
+${makeVCardAdr(address)}
+${makeVCardEmail(email)}
+${makeVCardURL(url)}
+${makeVCardTimeStamp()}
+END:VCARD`;
+
+return vCard;
+}
+    
+    
+            function createVCard(contact){
+                const newLink = document.createElement('a');
+                const vcard = makeVCard(contact)
+                const blob = new Blob([vcard], { type: "text/vcard" });
+    
+                newLink.href = URL.createObjectURL(blob);
+                newLink.download = `${contact.name}_vcard.vcf`;
+                newLink.click();
+    
+                URL.revokeObjectURL(newLink.href);
+            }
+    
+            // create one of these per contact
+            document.getElementById("saveId").addEventListener("click", () => {
+                const contact = {
+                    name: "Elzmari Bekker",
+                    org: "Bungee Fitness",
+                    phone: "+27 79 347 0274",
+                    email: "bungeefitnessmby@gmail.com",
+                    url: "https://vbcard.mobi/bungee-fitness"
+                };
+    
+                createVCard(contact)
+            });
+        }())
+    </script>
+</body>

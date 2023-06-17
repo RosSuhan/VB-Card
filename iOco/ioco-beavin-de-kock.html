@@ -18,8 +18,9 @@
     <div class="bodyCover">
         <header class="header">
             <div class="logoBlock">
-                <img src="/iOco/assets/iOCO_Logo_Mid Morning.jpg" alt="logo" class="logo">
+                <img src="/iOco/assets/Ioco-website banner-trans.png" alt="logo" class="logo">
             </div>
+            <br>
 
             <div>
                 <h1>Beavin de Kock</h1>
@@ -89,7 +90,7 @@
                 <div class="buttonBlock">
                     <div class="button">
                         <li>
-                            <a href="" class="buttonLink">
+                            <a href="https://ioco.tech/solutions/quality-assurance/" class="buttonLink">
                                 Quality Assurance
                             </a>
                         </li>
@@ -102,10 +103,9 @@
                             <summary>
                                 Let Us Get Back To You
                             </summary>
-        
-                            <a href="" download="pdf">
-                                <img src="" alt="" width="80%">
-                            </a>
+                            
+                            <iframe width="500" height="315" src="https://docs.google.com/forms/d/e/1FAIpQLSc0ZC4biWj5h0ov-D2uhqKkakI6vMtl3DUKIwnpi3m89a0zXQ/viewform?usp=sf_link" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" class="form"></iframe>
+                                                      
                         </details>
                     </div>
                 </div>
@@ -127,12 +127,6 @@
                             <img src="/iOco/assets/LinkedIn Icon.png" alt="linkedin" width="45px" height="45px">
                         </a>
                     </div>
-                    
-                    <div class="icon">
-                        <a href="https://open.spotify.com/show/5IkbEcZXblStT4OcoEYrQr?si=unv88mjJTq6CofJigae3Wg&nd=1">
-                            <img src="/iOco/assets/spotify icon.png" alt="spotify" width="80%">
-                        </a>
-                    </div>
                 
                     <div class="icon">
                         <a href="https://twitter.com/iOCO_Tech">
@@ -144,20 +138,15 @@
                         <a href="https://www.youtube.com/c/iOCOTech">
                             <img src="/iOco/assets/youtube icon.png" alt="youtube" width="80%">
                         </a>
-                    </div class="icon">
-                    
-    
-                    <div class="icon">
-                        <a href="{whatsapp}">
-                            <img src="/assets/Whatsapp Icon.png" alt="whatsapp" width="45px" height="45px">
-                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <script>
+
+      
+      <script>
         (function(){
             const makeVCardVersion = () => `VERSION:3.0`;
             const makeVCardName = (name) => `FN:${name}`;
@@ -168,37 +157,37 @@
             const makeVCardEmail = (email) => `EMAIL:${email}`;
             const makeVCardURL = (url) => `URL:${url}`;
             const makeVCardTimeStamp = () => `REV:${new Date().toISOString()}`;
-    
-    
-    function makeVCard({ name, org, title, phone, address, email, url }) {
-    const vCard = `BEGIN:VCARD
-    ${makeVCardVersion()}
-    ${makeVCardName(name)}
-    ${makeVCardOrg(org)}
-    ${makeVCardTitle(title)}
-    ${makeVCardTel(phone)}
-    ${makeVCardAdr(address)}
-    ${makeVCardEmail(email)}
-    ${makeVCardURL(url)}
-    ${makeVCardTimeStamp()}
-    END:VCARD`;
-    
-    return vCard;
-    }
-    
-    
+
+
+function makeVCard({ name, org, title, phone, address, email, url }) {
+const vCard = `BEGIN:VCARD
+${makeVCardVersion()}
+${makeVCardName(name)}
+${makeVCardOrg(org)}
+${makeVCardTitle(title)}
+${makeVCardTel(phone)}
+${makeVCardAdr(address)}
+${makeVCardEmail(email)}
+${makeVCardURL(url)}
+${makeVCardTimeStamp()}
+END:VCARD`;
+
+return vCard;
+}
+
+
             function createVCard(contact){
                 const newLink = document.createElement('a');
                 const vcard = makeVCard(contact)
                 const blob = new Blob([vcard], { type: "text/vcard" });
-    
+
                 newLink.href = URL.createObjectURL(blob);
                 newLink.download = `${contact.name}_vcard.vcf`;
                 newLink.click();
-    
+
                 URL.revokeObjectURL(newLink.href);
             }
-    
+
             // create one of these per contact
             document.getElementById("saveBeavin").addEventListener("click", () => {
                 const contact = {
@@ -209,9 +198,10 @@
                     email: "Beavin.De@iOCO.tech",
                     url: "https://www.linkedin.com/in/beavin-de-kock-88666012"
                 };
-    
+
                 createVCard(contact)
             });
         }())
     </script>
+
 </body>

@@ -1,0 +1,192 @@
+<head>
+    <title>Lifestyle Brokers No.1</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=5.0, width=device-width" />
+
+    <link href="/assets/Fav icon/favicon.ico" rel="shortcut icon" />
+
+    <link rel="stylesheet" type="text/css" href="/profiles/profilestyles/pieter-erasmus.css" />
+
+
+</head>
+<body>
+
+    <div class="background">
+
+        <div class="bodyCover">
+            <header class="header">
+                <img src="/profiles/pieter-erasmus/assets/Lifestyle Logo.jpg" alt="lifestyle brokers logo" class="logo">
+            </header>
+
+            
+            <h1 class="name">Pieter Erasmus</h1>
+        
+            <div class="content">
+                <div class="button">
+                    <details>
+                        <summary>
+                            Contact Pieter
+                        </summary>
+
+                        <div>
+                            <p>
+                                Pieter Erasmus
+                            </p>
+                        
+                            <a href="tel:+27790792710">
+                                079 079 2710
+                            </a>
+
+                            <a href="tel:+27116621742">
+                                011 662 1742
+                            </a>
+
+                            <a href="mailto:PErasmus@lifestylegroup.co.za">
+                                PErasmus@lifestylegroup.co.za
+                            </a>
+                        
+                            <p>
+                                33 Field St, Mossel Bay Central, Mossel Bay, 6500
+                            </p>
+
+                            <button class="saveButton" id="savePieter">
+                                Save to Contacts
+                            </button>
+                        </div>
+                    </details>
+                </div>
+            
+                <div class="button">
+                    <details>
+                        <summary>
+                            Business Description
+                        </summary>
+
+                        <div>
+                            <p>
+                                Lifestyle Brokers No.1 delivers a professional insurance broker service and is an authorised Financial Services Provider (FSP No. 41764). We provide insurance solutions to individuals, businesses, aviators, body corporates and homeowners associations through risk management and addressing each client's specific needs.
+                            </p>
+                        </div>
+                    </details>
+                </div>
+            
+                <div class="webButton">
+                    
+                    <a href="https://lifestylegroup.co.za" class="buttonLink">
+                        Website
+                    </a>
+                    
+                </div>
+            
+
+                <div class="webButton">
+                    
+                    <a href="https://my-cyber.thinkexpert.co.za/?token=Lifestyle-2" class="buttonLink">
+                        Personal Cyber Insurance
+                    </a>
+                    
+                </div>
+
+                <div class="webButton">
+                 
+                    <a href="https://cyber.thinkexpert.co.za/?token=Lifestyle-1" class="buttonLink">
+                        Business Cyber Insurance
+                    </a>
+                   
+                </div>
+
+                <div class="webButton">
+                   
+                    <a href="https://outlook.office365.com/owa/calendar/LifestyleBrokersNo1GardenRoute@lifestylegroup.co.za/bookings/" class="buttonLink">
+                        Make an appointment
+                    </a>
+                    
+
+                </div>
+            </div>
+
+            <!--Share button-->
+            <div class="share">
+                <div class="socialIcon">
+
+                    <a href="https://www.facebook.com/LifestyleBrokersNo1" >
+                        <img src="/assets/Facebook Icon.png" alt="facebook" width="45px" height="45px">
+                    </a>
+
+                    <a href="{instagram}">
+                        <img src="/assets/Instagram Icon.png" alt="instagram" width="45px" height="45px">
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/pieter-erasmus-67571330/">
+                        <img src="/assets/LinkedIn Icon.png" alt="linkedin" width="45px" height="45px">
+                    </a>
+
+                    <a href="{whatsapp}">
+                        <img src="/assets/Whatsapp Icon.png" alt="whatsapp" width="45px" height="45px">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function(){
+            const makeVCardVersion = () => `VERSION:3.0`;
+            const makeVCardName = (name) => `FN:${name}`;
+            const makeVCardOrg = (org) => `ORG:${org}`;
+            const makeVCardTitle = (title) => `TITLE:${title}`;
+            const makeVCardTel = (phone) => `TEL;TYPE=WORK,VOICE:${phone}`;
+            const makeVCardAdr = (address) => `ADR;TYPE=WORK,PREF:;;${address}`;
+            const makeVCardEmail = (email) => `EMAIL:${email}`;
+            const makeVCardURL = (url) => `URL:${url}`;
+            const makeVCardTimeStamp = () => `REV:${new Date().toISOString()}`;
+    
+    
+function makeVCard({ name, org, title, phone, address, email, url }) {
+const vCard = `BEGIN:VCARD
+${makeVCardVersion()}
+${makeVCardName(name)}
+${makeVCardOrg(org)}
+${makeVCardTitle(title)}
+${makeVCardTel(phone)}
+${makeVCardAdr(address)}
+${makeVCardEmail(email)}
+${makeVCardURL(url)}
+${makeVCardTimeStamp()}
+END:VCARD`;
+
+return vCard;
+}
+    
+    
+            function createVCard(contact){
+                const newLink = document.createElement('a');
+                const vcard = makeVCard(contact)
+                const blob = new Blob([vcard], { type: "text/vcard" });
+    
+                newLink.href = URL.createObjectURL(blob);
+                newLink.download = `${contact.name}_vcard.vcf`;
+                newLink.click();
+    
+                URL.revokeObjectURL(newLink.href);
+            }
+    
+            // create one of these per contact
+            document.getElementById("savePieter").addEventListener("click", () => {
+                const contact = {
+                    name: "Pieter Erasmus",
+                    org: "Lifestyle Brokers",
+                    phone: "+27 79 079 2710",
+                    email: "PErasmus@lifestylegroup.co.za",
+                    url: "https://vbcard.mobi/pieter-erasmus/"
+                };
+    
+                createVCard(contact)
+            });
+        }())
+    </script>
+</body>

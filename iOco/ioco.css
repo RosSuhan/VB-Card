@@ -20,7 +20,6 @@ body{
     align-items: center;
     align-content: space-evenly;
     align-self: center;
-    height: 100%;
     margin: 0;
 }
 
@@ -36,6 +35,7 @@ body{
 
 a{
     text-decoration: none;
+    color: black;
 }
 
 .logoBlock{
@@ -55,14 +55,30 @@ a{
     align-items: center;
     align-content: center;
     align-self: center;
+    border-radius: 60px;
 }
 
 h1{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 50px;
+    font-size: 40px;
     font-weight: bold;
     margin-bottom: -3px;
     color: #F6BE00;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }
 
 .position{
@@ -70,6 +86,7 @@ h1{
     font-size: bold;
     font-weight: 38px;
     color: #F6BE00;
+    text-align: center;
 }
 
 
@@ -102,19 +119,18 @@ h1{
 
 .button{
     background-color:  #6cb2b0;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     border-radius: 30px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 25px;
+    font-size: 15px;
     font-weight: 200;
     color: white;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     align-content: center;
-    text-indent: 30px;
 }
 
 .buttonLink{
@@ -124,27 +140,36 @@ h1{
 
 .button[hover]{
     background-color:  #6cc1b8;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     border-radius: 30px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 25px;
+    font-size: 15px;
     font-weight: 200;
     color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }
 
 
 
 details > summary {
     background-color:  #6cb2b0;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     border-radius: 30px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 25px;
+    font-size: 15px;
     font-weight: 200;
-    color: white;    
-    text-indent: 30px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }
 
 
@@ -154,25 +179,39 @@ details > summary {
 }
 
 details[open] > .section {
-    text-indent: 20%;
     background-color: white;
     border-left: black solid 1px;
     border-right: black solid 1px;
     border-bottom: black solid 1px;
     border-top: black solid 1px;
     padding-bottom: 4%;
+    background-color: purple;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.sectionContent {
+    text-indent: 15%;
+    color: black;
 }
 
 details[open] > summary {
     background-color:  #6cc1b8;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     border-radius: 30px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 25px;
+    font-size: 15px;
     font-weight: 200;
     color: white;    
     text-indent: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }
 
 .socialArea{
@@ -196,16 +235,19 @@ details[open] > summary {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-evenly;
+    align-items: space-evenly;
+    align-content: space-evenly;
+    width: 80%;
 }
 
 .icon{
-    width: 30%;
     row-gap: 10px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: space-evenly;
+    align-content: space-evenly;
     padding-bottom: 20px;
 }
 
@@ -219,18 +261,42 @@ details[open] > summary {
 
 .saveButton{
     background-color:  #6cb2b0;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     border-radius: 30px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 25px;
+    font-size: 15px;
     font-weight: 200;
     color: white;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     align-content: center;
-    text-indent: 30px;
     border: none;
+}
+
+.saveButton[active]{
+    background-color:  #6cb2b0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 200;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border: none;
+}
+
+.form{
+    width: 100%;
 }
