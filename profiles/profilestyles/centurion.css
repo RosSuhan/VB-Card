@@ -1,0 +1,167 @@
+body{
+    margin: 0;
+    background-image: url(/profiles/centurion/assets/centurion-background.png);
+    background-blend-mode: overlay;
+    backface-visibility: visible;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+  
+  a{
+    text-decoration: none;
+  }
+  
+  .bodyCover{
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+  }
+  
+  .header{
+    margin-top: 3%;
+  }
+  
+  .logo{
+    width: 80%;
+  }
+  
+  .name{
+    color: white;
+    font-family: 'Montserrat';
+    font-size: 30px;
+    font-weight: 500;
+    padding-bottom: 15px;
+  }
+  
+  .socialIcon{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-evenly;
+  }
+  
+  .content{
+    width: 80%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  
+  .button{
+    width: 100%;
+    display: flexbox;
+    flex-direction: column;  
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat';
+    text-align: center;
+  }
+  
+  .webButton{
+    background-color: rgb(132, 189, 0);
+    border: none;
+    box-shadow: none;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    border-radius: 30px;
+    text-align: center;
+  }
+  
+  .buttonLink{
+    text-decoration: none;
+    color: black;
+    font-size: large;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .buttonContent{
+    background-color: transparent;
+    text-align: center;
+    color: black;
+    font-size: large;
+    font-weight: bold;
+    border: none;
+  }
+  
+  .saveButton{
+    background-color: rgb(132, 189, 0);
+    border: none;
+    border-radius: 35px;
+    padding: 15px;
+    font-size: medium;
+    font-weight: 700;
+    color: black;
+  }
+  
+  
+  <!--css code vir die accordion-->
+  
+  details {
+  font: 16px 'Montserrat';
+  background-color: transparent;
+  }
+  
+  details > summary {
+  background-color: rgb(132, 189, 0);
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: large;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  border-radius: 30px;
+  text-align: center;
+  }
+  
+  
+  
+  ::marker{
+  color: transparent;
+  }
+  
+  details[open] > p, a {
+  border-radius: 0;
+  background-color: transparent;
+  margin: 10px;
+  box-shadow: none;
+  text-align: left;
+  text-decoration: none;
+  color: white;
+  }
+  
+  details[open] > summary {
+  background-color:rgb(132, 189, 0);
+  }
+  
+  footer{
+  width: 100%;
+  background-color: transparent;
+  }
+  
+  h6{
+  color: transparent;
+  }

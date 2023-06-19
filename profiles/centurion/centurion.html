@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+           Centurion Systems
+        </title>
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=5.0, width=device-width" />
+
+        <link href="/assets/Fav icon/favicon.ico" rel="shortcut icon" />
+
+        <link rel="stylesheet" type="text/css" href="/profiles/profilestyles/centurion.css"/>
+
+
+    </head>
+    <body>
+
+        <div class="background">
+
+            <div class="bodyCover">
+                <header class="header">
+                    <img src="/profiles/centurion/assets/Centurion-logo-transparent.png" alt="centurion systems logo" class="logo">
+                </header>
+                <h1 class="name">
+                    {first-name}{last-name}
+                </h1>
+
+                <h3 style="color: white;">
+                    Centurion Systems
+                </h3>
+
+                <!--social links to be added here-->
+
+                <div class="content"><!--button to website-->
+
+                    <div class="button">
+                        <div class="webButton">
+                            <a href="https://www.centsys.co.za/" class="buttonLink">
+                                Website
+                            </a>
+                        </div>
+                    </div>
+                    <br>
+                    <!--button to contact-->
+                    <div class="button">
+                        <details>
+                            <summary>
+                                Contact {first-name}
+                            </summary>
+                            <h3 style="color: white;">
+                                {first-name}{last-name}
+                            </h3>
+                            <div>
+                                <a href="tel:{contact-number}">
+                                    {contact-number}
+                                </a>
+                            </div>
+                            <br>
+                            <div>
+                                <a href="mailto:{email}">
+                                    {email}
+                                </a>
+                            </div>
+                            <br>
+                            <address style="color: white;">
+                                {address}
+                            </address>
+                
+                            <div>
+                                <p style="color: white;">
+                                    Monday - Thursday: 8 - 16:30 <br>Friday: 8 - 16:00
+                                </p>
+                            </div>
+                            <button class="saveButton" id="save{first-name}">
+                                Save To Contacts
+                            </button>
+                        </details>
+                    </div>
+                    <br>
+                    <!--button to pryslist-->
+                    <div class="button">
+                        <div class="webButton">
+                            <a href="https://support.centsys.co.za/portal/en/kb/centsys-technical-support" class="buttonLink">
+                                Knowledge Base
+                            </a>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="button">
+                        <div class="webButton">
+                            <a href="https://api.whatsapp.com/send/?phone=270836504010&text&type=phone_number&app_absent=0" class="buttonLink">
+                                Chat to us on Whatsapp
+                            </a>
+                        </div>
+                    </div>
+                
+
+                    <div class="socialIcon">     
+                        <a href="https://web.facebook.com/CenturionSystems/?brand_redir=103608624879041" >
+                            <img src="/assets/Facebook Icon.png" alt="facebook" width="45px" height="45px">
+                        </a>
+
+                        <a href="https://www.instagram.com/centurion.systems/">
+                            <img src="/assets/Instagram Icon.png" alt="instagram" width="45px" height="45px">
+                        </a>
+
+                        <a href="https://www.youtube.com/@CenturionSystems">
+                            <img src="/assets/YouTube Icon.png" alt="linkedin" width="45px" height="45px">
+                        </a>                      
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            (function(){
+                const makeVCardVersion = () => `VERSION:3.0`;
+                const makeVCardName = (name) => `FN:${name}`;
+                const makeVCardOrg = (org) => `ORG:${org}`;
+                const makeVCardTitle = (title) => `TITLE:${title}`;
+                const makeVCardTel = (phone) => `TEL;TYPE=WORK,VOICE:${phone}`;
+                const makeVCardAdr = (address) => `ADR;TYPE=WORK,PREF:;;${address}`;
+                const makeVCardEmail = (email) => `EMAIL:${email}`;
+                const makeVCardURL = (url) => `URL:${url}`;
+                const makeVCardTimeStamp = () => `REV:${new Date().toISOString()}`;
+        
+        
+function makeVCard({ name, org, title, phone, address, email, url }) {
+const vCard = `BEGIN:VCARD
+${makeVCardVersion()}
+${makeVCardName(name)}
+${makeVCardOrg(org)}
+${makeVCardTitle(title)}
+${makeVCardTel(phone)}
+${makeVCardAdr(address)}
+${makeVCardEmail(email)}
+${makeVCardURL(url)}
+${makeVCardTimeStamp()}
+END:VCARD`;
+
+return vCard;
+}
+        
+        
+                function createVCard(contact){
+                    const newLink = document.createElement('a');
+                    const vcard = makeVCard(contact)
+                    const blob = new Blob([vcard], { type: "text/vcard" });
+        
+                    newLink.href = URL.createObjectURL(blob);
+                    newLink.download = `${contact.name}_vcard.vcf`;
+                    newLink.click();
+        
+                    URL.revokeObjectURL(newLink.href);
+                }
+        
+                // create one of these per contact
+                document.getElementById("save{first-name}").addEventListener("click", () => {
+                    const contact = {
+                        name: "{first-name}{last-name}",
+                        org: "Centurion Systems",
+                        phone: "{contact-number}",
+                        email: "{email}",
+                        url: "https://vbcard.mobi/{title-url}/"
+                    };
+        
+                    createVCard(contact)
+                });
+            }())
+        </script>
+    </body>
+</html>
