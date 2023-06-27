@@ -24,6 +24,8 @@ body{
 }
 
 .header{
+    max-width: 500px;
+    min-width: 360px;
     display: flex;
     flex-direction: column;
     justify-content: center;    
@@ -92,7 +94,8 @@ h2{
 
 
 .content{
-    width: 100%;
+    max-width: 500px;
+    min-width: 360px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;    

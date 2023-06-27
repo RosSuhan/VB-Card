@@ -19,57 +19,64 @@
 
         <div class="bodyCover">
             <header class="header">
-                <img src="{logo}" alt="" width="200px" height="150px" class="logo">
+                <img src="/businessFinder/assets/La Familia Barista Academy.png" alt="" width="200px" height="150px" class="logo">
             </header>
 
             
-            <h1 class="name">{title}</h1>
+            <h1 class="name">Name Surname</h1>
 
-            <p>{company_bio}</p>
+            <h3 class="position">Position</h3>
         
-            <div class="">
+            <div class="content">
+                
+                <details>
+                    <summary class="">
+                        Contact Name
+                    </summary>
+
+                    <div>
+                        <h4>
+                            Name Surname
+                        </h4>
+                    
+                        <a href="tel:{contactNumber1}">
+                            012 345 6789
+                        </a>
+
+                        <a href="tel:contactNumber2">
+                            012 345 6789
+                        </a>
+
+                        <a href="mailto:{emailAddress}">
+                            email@address.co.za
+                        </a>
+                    
+                        <address>
+                            address
+                        </address>
+                        
+                        <p>
+                            Mon-Fri: 08h00 - 17h00 
+
+                        </p>
+                    </div>
+                    <button class="button" id="saviID">
+                        Save to contacts
+                    </button>
+                </details>
+                
+            
+            
+                {if website != ""}
                 <div class="button">
-                    <details>
-                        <summary class="">
-                            Contact {firstName}
-                        </summary>
-
-                        <div>
-                            <p>
-                                {firstName}{lastName}
-                            </p>
-                        
-                            <a href="tel:{contactNumber1}">
-                                {contactNumber1}
-                            </a>
-
-                            <a href="tel:contactNumber2">
-                                {contactNumber2}
-                            </a>
-
-                            <a href="mailto:{emailAddress}">
-                                {emailAddress}
-                            </a>
-                        
-                            <p>
-                                {address}
-                            </p>
-                            
-                            <p>
-                                {operatingHours}
-                            </p>
-                        </div>
-                    </details>
+                    <a href="{website}" class="buttonContent">
+                        website
+                    </a>
                 </div>
-            <div>
+                {/if}
 
-            <div class="button">
-                <a href="{website}" class="buttonContent">
-                    {website}
-                </a>
-            </div>
-
-            <div class="button">
+            
+            
                 <details>
                     <summary class="buttonContent">
                         Company Profile
@@ -79,65 +86,34 @@
                         <img src="" alt="" width="80%">
                     </a>
                 </details>
-            </div>
-
-            <div class="button">
-                <details>
-                    <summary class="">
-                       
-                    </summary>
-
-                    <a href="" download="pdf">
-                        <img src="" alt="" width="80%">
-                    </a>
-                </details>
-            </div>
-
-            <div class="button">
-                <details>
-                    <summary class="">
-                        Tab
-                    </summary>
-
-                    <a href="" download="Pricelist">
-                        <img src="" alt="" width="80%">
-                    </a>
-                </details>
-            </div>
-
-            <div class="button">
-                <details>
-                    <summary class="">
-                        Tab
-                    </summary>
-
-                    <a href="" download="Pricelist">
-                        <img src="" alt="moringa Pricelist" width="80%">
-                    </a>
-                </details>
+            
+                
             </div>
 
 
                     <!--Share button-->
-            <div class="share">
-                <div class="socialIcon">
 
-                    <a href="{facebook}" >
-                        <img src="/assets/Facebook Icon.png" alt="facebook" width="45px" height="45px">
-                    </a>
+            <div class="socialIcon">
 
-                    <a href="{instagram}">
-                        <img src="/assets/Instagram Icon.png" alt="instagram" width="45px" height="45px">
-                    </a>
+                
+                <a href="{facebook}" >
+                    <img src="/assets/Facebook Icon.png" alt="facebook" width="45px" height="45px">
+                </a>
 
-                    <a href="linkedin">
-                        <img src="/assets/LinkedIn Icon.png" alt="linkedin" width="45px" height="45px">
-                    </a>
 
-                    <a href="{whatsapp}">
-                        <img src="/assets/Whatsapp Icon.png" alt="whatsapp" width="45px" height="45px">
-                    </a>
-                </div>
+                
+                <a href="{instagram}">
+                    <img src="/assets/Instagram Icon.png" alt="instagram" width="45px" height="45px">
+                </a>
+                
+                <a href="linkedin">
+                    <img src="/assets/LinkedIn Icon.png" alt="linkedin" width="45px" height="45px">
+                </a>
+                
+                <a href="{whatsapp}">
+                    <img src="/assets/Whatsapp Icon.png" alt="whatsapp" width="45px" height="45px">
+                </a>
+                    
             </div>
         </div>
     </div>

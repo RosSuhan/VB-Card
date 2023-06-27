@@ -11,7 +11,8 @@ a{
 }
   
 .bodyCover{
-  width: 100%;
+  max-width: 500px;
+  min-width: 350px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -37,14 +38,18 @@ a{
 }
 
 .bioBlock{
-  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
   width: 80%;
 }
 
 .bio{
-  display: inline-block;
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
   background-color: transparent;
 }
 

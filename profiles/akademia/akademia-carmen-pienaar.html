@@ -20,62 +20,58 @@
     <body>
 
         <div class="background">
-
-            <header class="header">
-                <img src="/profiles/akademia/assets/Akademia Logo wit.png" alt="akademia logo" class="logo">
-            </header>
-            
-            <div class="intro">
-                <h1 class="name">
-                    Carmen Pienaar
-                </h1>
-
-                <h3 class="position">
-                    Studentewerwer
-                </h3>
-            </div>
-
-            <div class="content">
-                <div class="button">
+            <div class="pageContent">
+                <header class="header">
+                    <img src="/assets/Akademia_Logo_wit.png" alt="akademia logo" class="logo">
+                </header>
+                <div class="introBlock">
+                    <h1 class="name">
+                        {title}
+                    </h1>
+                    <h3 class="position">
+                        {akademia_contact:pos}
+                    </h3>
+                </div>
+                
+    
+                <div class="content">
                     <details>
                         <summary>
                             Kontak Carmen Pienaar
                         </summary>
-                        <p>
-                            Akademia <br> Carmen Pienaar
-                        </p>
-                        <br>
-                        <div>
+                        <div class="detailInfo">
+                            <h4>
+                                Akademia - {akademia_contact:first_name}{akademia_contact:last_name}
+                            </h4>
+                            
                             <a href="tel:+27861222888" class="summaryInfo">
                                 0861 222 888
                             </a>
-                        </div>
-                        <br>
-                        <div>
-                            <a href="mailto:carmenM@akademia.ac.za" class="summaryInfo">
-                                carmenM@akademia.ac.za
+                        
+                            <a href="mailto:{akademia_contact:email}" class="summaryInfo">
+                                {akademia_contact:email}
                             </a>
+                            
+                            <button class="saveButton" id="{akademia_contact:first_name}ContactButton">
+                                Stoor Kontak Besonderhede
+                            </button>
                         </div>
-                        <br>
-                        <button class="saveButton" id="carmenContactButton">
-                            Stoor Kontak Besonderhede
-                        </button>
                     </details>
-                    <br>
+
                     <details>
                         <summary>
                             Belangstellingsvorm
                         </summary>
 
-                        <iframe src="" title="belangstellingsvorm" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen height="600px"></iframe>
+                        <iframe src="{akademia_contact:belangstellingsvorm_link}" title="belangstellingsvorm" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen height="600px"></iframe>
                     </details>
-                    <br>
+                    
 
                     <details>
                         <summary>
                             Voltydse kampusmodel
                         </summary>
-                        <div class="summaryBlock">
+                        <div class="summaryInfo">
                             <a href="https://akademia.ac.za/ba-kommunikasie-en-joernalistiek/">
                                 BA (Kommunikasie en Joernalistiek)
                             </a>
@@ -121,16 +117,16 @@
                             </a>
                         </div>
                     </details>
-                    <br>
+                    
                     <details>
                         <summary>
                             Nauurse afstandsmodel
                         </summary>
-                        <br>
-                        <h3>
-                            Nagraadse Diplomas
-                        </h3>
-                        <div class="summaryBlock">
+                        <div class="summaryInfo">
+                            <h5>
+                                Nagraadse Diplomas
+                            </h5>
+                            
                             <a href="https://akademia.ac.za/nagraadse-diploma-in-belasting/">
                                 Nagraadse Diploma in Belasting
                             </a>
@@ -138,22 +134,19 @@
                             <a href="https://akademia.ac.za/nagraadse-diploma-in-bestuursrekeningkunde/">
                                 Nagraadse Diploma in Bestuursrekeningkunde
                             </a>
-                        </div>
-                        <br>
-                        <br>
-                        <h3>
-                            NAGRAADSE SERTIFIKAAT
-                        </h3>
-                        <div class="summaryBlock">
+                            
+                            <h5>
+                                NAGRAADSE SERTIFIKAAT
+                            </h5>
+                            
                             <a href="https://akademia.ac.za/nagraadse-onderwyssertifikaat/">
                                 Nagraadse onderwyssertifikaat (Senior Fase- en VOO-Onderwys)
                             </a>
-                        </div>
-                        <br>
-                        <h3>
-                            GRADE
-                        </h3>
-                        <div class="summaryBlock">
+                            
+                            <h5>
+                                GRADE
+                            </h5>
+                            
                             <a href="https://akademia.ac.za/llb-graad/">
                                 Baccalaureus Legum (LLB)
                             </a>
@@ -177,23 +170,19 @@
                             <a href="https://akademia.ac.za/bsocsci-politiek-filosofie-en-ekonomie/">
                                 BSocSci (Politiek, Filosofie en Ekonomie)
                             </a>
-                        </div>
-                        <br>
-                        <br>
-                        <h3>
-                            GEVORDERDE DIPLOMA
-                        </h3>
-                        <div class="summaryBlock">
+                            
+                            <h5>
+                                GEVORDERDE DIPLOMA
+                            </h5>
+                            
                             <a href="https://akademia.ac.za/gevorderde-diploma-projekbestuur/">
                                 Gevorderde Diploma in Projekbestuur
                             </a>
-                        </div>
-                        <br>
-                        <br>
-                        <h3>
-                            HOËR SERTIFIKATE
-                        </h3>
-                        <div class="summaryBlock">
+                            
+                            <h5>
+                                HOËR SERTIFIKATE
+                            </h5>
+                            
                             <a href="https://akademia.ac.za/hoer-sertifikaat-kantooradministrasie/">
                                 Hoër Sertifikaat in Kantooradministrasie
                             </a>
@@ -201,40 +190,44 @@
                             <a href="https://akademia.ac.za/hoer-sertifikaat-rekeningkunde/">
                                 Hoër Sertifikaat in Rekeningkunde
                             </a>
+                            
                         </div>
+                        
                     </details>
+                    
+                </div>   
+                
+                <div class="socialIcon">
+                    <a href="https://www.facebook.com/akademiakampus/" >
+                        <img src="/assets/Facebook Icon.png" alt="akademia facebook" width="45px" height="45px">
+                    </a>
+    
+                    <a href="https://twitter.com/OnsAkademia">
+                        <img src="/assets/Twitter Icon.png" alt="akademia twitter" width="45px" height="45px">
+                    </a>
+    
+                    <a href="https://www.youtube.com/channel/UCCwpMNal_7HAEQSVpHyyKaw">
+                        <img src="/assets/YouTube Icon.png" alt="akademia youtube" width="45px" height="45px">
+                    </a>
+    
+                    <a href="https://www.instagram.com/akademiakiekies/">
+                        <img src="/assets/Instagram Icon.png" alt="akademia instagram" width="45px" height="45px">
+                    </a>
+    
+                    <a href="https://www.linkedin.com/school/akademia/">
+                        <img src="/assets/LinkedIn Icon.png" alt="akademia linkedin" width="45px" height="45px">
+                    </a>
+    
+                    <a href="https://api.whatsapp.com/send?phone=27879971790&text=&source=&data=">
+                        <img src="/assets/Whatsapp Icon.png" alt="akademia whatsapp" width="45px" height="45px">
+                    </a>
+    
+                    <a href="https://vm.tiktok.com/ZSevo2f8F/">
+                        <img src="/assets/Tik Tok Icon.png" alt="akademia tiktok" width="45px" height="45px">
+                    </a>
                 </div>
-            </div>   
-            
-            <div class="socialIcon">
-                <a href="https://www.facebook.com/akademiakampus/" >
-                    <img src="/assets/Facebook Icon.png" alt="akademia facebook" width="45px" height="45px">
-                </a>
-
-                <a href="https://twitter.com/OnsAkademia">
-                    <img src="/assets/Twitter Icon.png" alt="akademia twitter" width="45px" height="45px">
-                </a>
-
-                <a href="https://www.youtube.com/channel/UCCwpMNal_7HAEQSVpHyyKaw">
-                    <img src="/assets/YouTube Icon.png" alt="akademia youtube" width="45px" height="45px">
-                </a>
-
-                <a href="https://www.instagram.com/akademiakiekies/">
-                    <img src="/assets/Instagram Icon.png" alt="akademia instagram" width="45px" height="45px">
-                </a>
-
-                <a href="https://www.linkedin.com/school/akademia/">
-                    <img src="/assets/LinkedIn Icon.png" alt="akademia linkedin" width="45px" height="45px">
-                </a>
-
-                <a href="https://api.whatsapp.com/send?phone=27879971790&text=&source=&data=">
-                    <img src="/assets/Whatsapp Icon.png" alt="akademia whatsapp" width="45px" height="45px">
-                </a>
-
-                <a href="https://vm.tiktok.com/ZSevo2f8F/">
-                    <img src="/assets/Tik Tok Icon.png" alt="akademia tiktok" width="45px" height="45px">
-                </a>
             </div>
+            
         </div>
 
         <footer>
@@ -286,18 +279,19 @@ return vCard;
                 }
         
                 // create one of these per contact
-                document.getElementById("carmenContactButton").addEventListener("click", () => {
+                document.getElementById("{akademia_contact:first_name}ContactButton").addEventListener("click", () => {
                     const contact = {
-                        name: "Akademia - Carmen Pienaar",
+                        name: "Akademia - {akademia_contact:first_name}{akademia_contact:last_name}",
                         phone: "+27 861 222 888",
-                        email: "carmenM@akademia.ac.za",
-                        url: "https://vbcard.mobi/akademia-carmen-pienaar"
+                        email: "{akademia_contact:email}",
+                        url: "https://vbcard.mobi/{url_title}"
                     };
         
                     createVCard(contact)
                 });
             }())
         </script>
-                
+        {/akademia_contact}
+        {/exp:channel:entries}
     </body>
 </html>

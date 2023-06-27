@@ -19,7 +19,8 @@ text-decoration: none;
 
 .bodyCover{
 background-color: rgba(245, 245, 245, 0.404);
-width: 100%;
+max-width: 500px;
+min-width: 350px;
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -67,7 +68,7 @@ padding-bottom: 15px;
 
 .button{
 display: flex;
-width: 90%;
+width: 100%;
 flex-direction: column;  
 justify-content: center;
 justify-items: flex-start;
@@ -75,7 +76,6 @@ font-family: "Acumin Pro Font family", Sans-serif;
 border-radius: 35px 35px 35px 35px;
 text-align: left;
 margin-bottom: 10%;
-padding-left: 15px;
 }
 
 .saveButton{

@@ -6,132 +6,140 @@ body{
   width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
-  align-content: center;
+  align-content: space-evenly;
 }
   
 a{
   text-decoration: none;
+  color: #000000;
 }
   
-.bodyCover{
+.background{
   width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-content: center;
   align-items: center;
-  text-align: center;
   margin: 0;
+}
+
+.pageContent{
+  max-width: 500px;
+  min-width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: space-evenly;
 }
 
 .header{
-  width: 100vw;
   margin: 0;
   background-color: #0e1e3b;
   border-bottom: #935e28 solid 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 
 .logo{
-  width: 100%;
+  width: 70%;
 }
 
-.intro{
+.introBlock{
   width: 100%;
+  margin: 0;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   align-content: center;
 }
 
 .name{
+  width: 100%;
   color: #000000;
   font-family: "Acumin Pro Font family", Sans-serif;
   font-size: 30px;
   font-weight: bold;
   margin-bottom: -2%;
-}
-
-.summaryName{
-  text-align: center;
-  width: 100%;
-  font-size: 20px;
-}
-
-.summaryInfo{
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  text-align: center;
-  width: 100%;
-  font-size: 20px;
-}
-
-.position{
-  color: #000000;
-  font-size: 20px;
-}
-
-
-.bio{
-  display: inline-block;
-  flex-direction: row;
   flex-wrap: wrap;
-  background-color: transparent;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 
 .content{
-  width: 100vw;
+  width: 90%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   align-content: center;
   padding-top: 10px;
-  margin: 0;
+  margin-bottom: 7%;
+  row-gap: 20px;
 }
 
-h3{
-  text-align: left;
-}
-  
-
-  
-
-.share{
-  display: flex;
-  width: 100vw;
-  flex-direction: column;  
-  align-content: center;  
-}
-  
-.socialIcon{
-  padding-top: 15px;
-  padding-bottom: 15px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: space-evenly;
-  column-gap: 8%;
-}
-  
-.button{
-  display: flexbox;
-  width: 80vw;
+details{
+  width: 100%;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  border-radius: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: center;
   align-items: center;
-  font-family: "Acumin Pro Font family", Sans-serif;
+}
+
+details > summary {
+  width: 100%;
+  background-color: #0e1e3b;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 30px;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: x-large;
+  color: white;
   text-align: center;
-  margin-bottom: 2%;
-  padding-left: 15px;
-  row-gap: 3px;
+}
+
+::marker{
+  color: transparent;
+}
+
+.detailInfo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  row-gap: 30px;
+}
+
+h4{
+  width: 100%;
+  text-align: center;
+  font-size: x-large;
+  margin-bottom: -1%;
 }
 
 .saveButton{
   background-color: #0e1e3b;
-  width: 100%;
+  width: 80%;
   border: none;
   border-radius: 35px;
   padding: 15px;
@@ -146,129 +154,41 @@ h3{
   align-items: center;
 }
 
-.webButton{
-  width: 370px;
-  background-color: #0e1e3b;
-  border: none;
-  box-shadow: none;
-  padding-left: 25px;
-  padding-top: 10px;
-  padding-right: 10px;
-  padding-bottom: 10px;
-  border-radius: 30px;
-  text-align: center;
-}
-
-.buttonLink{
-  text-decoration: none;
-  color: white;
-  font-size: large;
-  font-weight: bold;
-  width: 100%;
-}
-
-.buttonSingle{
-  width: 100%;
-  background-color: #0e1e3b;
-  border: none;
-  box-shadow: none;
-  padding-left: 15px;
-  padding-top: 10px;
-  padding-right: 10px;
-  padding-bottom: 10px;
-  margin-bottom: 10%;
-  border-radius: 30px;
-}
-  
-
-
-  
-  <!--css code vir die accordion-->
-  
-details {
-  font: 16px "Acumin Pro Font family", sans-serif;
-  width: 80vw;
-  background-color: transparent;
+.summaryInfo{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: left;
   align-content: center;
-  align-items: center;
-}
-
-details > summary {
-  width: 80vw;
-  background-color: #0e1e3b;
-  border: none;
-  box-shadow: none;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: large;
-  padding-left: 15px;
-  padding-top: 15px;
-  padding-right: 15px;
-  padding-bottom: 15px;
-  border-radius: 30px;
-  color: white;
-}
-
-
-
-::marker{
-  color: transparent;
-}
-
-
-.summaryBlock{
-  padding: 2%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  text-align: center;
   row-gap: 15px;
 }
 
+h5{
+  text-align: center;
+  font-size: larger;
+  margin-bottom: -1%;
+}
 
-.summaryContent{
-  width: 100%;
+.position{
+  color: #000000;
+  font-size: 20px;
+}
+
+h3{
+  text-align: left;
+}
+  
+
+.socialIcon{
+  max-width: 500px;
+  min-width: 350px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  align-content: center;
-  text-align: center;
+  align-content: space-evenly;
+  column-gap: 8%;
+  row-gap: 15px;
 }
-
-
-
-details[open] > p, a, div {
-  border-radius: 0;
-  box-shadow: none;
-  text-align: center;
-  text-indent: 0%;
-  text-decoration: none;
-  color: #000000;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-}
-
-details[open] > summary {
-  background-color:#0e1e3b;
-}
-
-footer{
-  background-color: #0e1e3b;
-  border-top: #935e28 solid 5px;
-  width: 100%;
-}
-
-h6{
-  color: #0e1e3b;
-}
-
-
