@@ -1,0 +1,50 @@
+details{
+    background-color: red;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  details > summary{
+    background: linear-gradient(90deg, #00d6b7, #005d91, #6422ae);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    align-items: center;
+    padding: 10px;
+    border-radius: 30px;
+  }
+  
+  .summarySpan {
+    position: relative;
+  }
+  
+  .::before{
+    content: '';
+    position: absolute;
+    inset: 1px;
+    background-color: #1a1a1a;
+    border-radius: 9px;
+    transition: 0.5s;
+  }
+  
+  ..summary:hover::before{
+    opacity: 0.7;
+  }
+  
+  /*add some glow effect*/
+  ..summary::after{
+    content: '';
+    position: absolute;
+    inset: 0px;
+    background: linear-gradient(90deg, #00d6b7, #005d91, #6422ae);
+    border-radius: 9px;
+    transition: 0.5s;
+    opacity: 0;
+  }
+  
+  ..summary:hover::after{
+    opacity: 0;
+  }

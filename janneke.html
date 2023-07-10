@@ -13,6 +13,9 @@
 
         <link href="/assets/Fav icon/favicon.ico" rel="shortcut icon" />
 
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
         <link rel="stylesheet" type="text/css" href="/style/janneke.css" />
 
 
@@ -23,59 +26,57 @@
 
             <div class="bodyCover">
                 
-                <header class="header">
+                <header>
                     <img src="/assets/VB Icon1.png" alt="vb card logo" class="logo">
-                    <h1 class="name">
+                    <h1>
                         Janneke Nel
                     </h1>
                 </header>
                     
-                      
-
                 <div class="content">
-                    
                     <details>
-                        <summary>
-                            Contact Janneke Nel
+                        <summary type="menu" class="hover-me">
+                            <span>
+                                Contact Janneke Nel
+                            </span>
                         </summary>
-                        <div class="detailBack">
-                            <h3>
-                                Janneke Nel
-                            </h3>
-                            
-                            
-                            <a href="tel:+27714735834">
-                                071 473 5834
-                            </a>
-                        
-                            <a href="mailto:info@vbcard.mobi">
-                                info@vbcard.mobi
-                            </a>
-
-                            <button class="saveButton" id="saveJanneke">
-                                Save To Contacts
+                        <div class="dropdown">
+                            <ul>
+                                <li>
+                                    <h3><span><ion-icon name="person-outline" class="icon"></ion-icon></span><span>Janneke Nel</span></h3>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <span><ion-icon name="call-outline" class="icon"></ion-icon></span>
+                                        <span>Telephon</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <span><ion-icon name="mail-open-outline" class="icon"></ion-icon></span>
+                                        <span>Email</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <button type="button" class="hover-me" id="saveJanneke">
+                                <span class="save-btn">Save To Contact</span>
                             </button>
-                          
                         </div>
                     </details>
-                    
-                    <a href="https://vbcard.mobi" class="webButton">
-                        <span class="buttonLink">
-                            Website
-                        </span>
-                    </a>
-                    
-                    
 
-                    
-                    <div class="webButton">
-                        <a href="/assets/VBcard Pricelist.pdf" download="pricelist" class="buttonLink">
-                            Pricelist
+                    <button type="button" class="hover-me">
+                        <a href="https://vbcard.mobi" >
+                            <span>
+                                Website
+                            </span>
                         </a>
-                    </div>
+                    </button>
                     
-
-                
+                    <button type="button" class="hover-me">
+                        <a href="/assets/VBcard Pricelist.pdf" download="pricelist" >
+                        <span>Pricelist</span>
+                        </a>
+                    </button>
                 </div>
                 
             </div>
@@ -102,6 +103,20 @@
             </footer>
         </div>
         
+        <script>
+            const toggleBtn = document.querySelector('.toggle_btn')
+            const toggleBtnIcon = document.querySelector('.toggle_btn i')
+            const dropDownMenu = document.querySelector('.drop_menu')
+
+            toggleBtn.onclick = function () {
+                dropDownMenu.classList.toggle('open')
+                const isOpen = dropDownMenu.classList.contains('open')
+
+                toggleBtnIcon.classList = isOpen
+                ? 'hamburger1'
+                : 'hamburger'
+            }
+        </script>
           
         <script>
             (function(){

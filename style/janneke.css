@@ -1,17 +1,20 @@
 @import url(https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap);
 
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
+a{
+  text-decoration: none;
+  font-size: larger;
+  color: #fff;
+}
 
 body{
-  margin: 0;
-  background-color: transparent;
-  background-image: url(/assets/Untitled\ design.png);
+  background-color: black;
   background-blend-mode: overlay;
   backface-visibility: visible;
   background-origin: border-box;
@@ -19,211 +22,165 @@ body{
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  
-}
-
-.bodyCover{
-  margin: 0;
-  height: 90vh;
-  max-width: 500px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-a{
-  text-decoration: none;
-}
-
-.header{
-  width: 100%;
-  margin-top: 40px;
-}
-
-.logo{
-  width: 30%;
-}
-
-.name{
-  color: aliceblue;
-  font-family: "Acumin Pro Font family", Sans-serif;
-  font-size: 30px;
-  font-weight: 500;
-  padding-bottom: 15px;
-}
-
-
-.content{
-  width: 80%;
-  min-height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin: 2%;
-  row-gap: 50px;
 }
 
-.webButton{
+.background{
+  max-width: 500px;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+header{
   width: 100%;
-  background: linear-gradient(90deg, #00d6b7, #005d91, #6422ae);
-  border: none;
-  box-shadow: none;
-  border-radius: 30px;
+  min-height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header .logo {
+  width: 25%;
+}
+
+h1{
+  display: block;
   text-align: center;
-  padding-left: 10px;
-  padding-top: 10px;
-  padding-right: 10px;
-  padding-bottom: 10px;
+  color: #fff;
+}
+
+h3 span {
+  color: #fff;
+}
+
+.content{
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px;
+}
+
+.hover-me{
+  position: relative;
+  text-decoration: none;
+  width: 100%;
+  color: white;
+  background: linear-gradient(90deg, #00d6b7, #005d91, #6422ae);
+  padding-top: 14px;
+  padding-bottom: 14px;
   border-radius: 30px;
-  font-weight: bold;
-  font-size: large;
+  font-size: 1.25em;
+  font-weight: bolder;
 }
 
 details {
-  font: 16px "Acumin Pro Font family", sans-serif;
   width: 100%;
-  margin: 0;
-}
-
-details > summary {
-  width: 100%;
-  background: linear-gradient(90deg, #00d6b7, #005d91, #6422ae);
-  border: none;
-  box-shadow: none;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: large;
-  padding-left: 10px;
-  padding-top: 10px;
-  padding-right: 10px;
-  padding-bottom: 10px;
-  border-radius: 30px;
-  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  font-size: 1.5;
+  font-weight: bolder;
 }
 
-details[open] > div {
-  background-color: white;
-  border: #000000 10px solid;
+.hover-me a span {
+  color: #fff;
+  font-size: 1.25;
+  font-weight: bolder;
+}
+
+.save_btn {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bolder;
+}
+
+.hover-me span{
+  position: relative;
+}
+
+.hover-me::before{
+  content: '';
+  position: absolute;
+  inset: 3px;
+  background-color: #1a1a1a;
+  border-radius: 30px;
+  transition: 0.5s;
+}
+
+.hover-me:hover::before{
+  opacity: 0.7;
+}
+
+/*add some glow effect*/
+.hover-me::after{
+  content: '';
+  position: absolute;
+  inset: 0px;
+  background: linear-gradient(90deg, #00d6b7, #005d91, #6422ae);
+  border-radius: 9px;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.hover-me:hover::after{
+  opacity: 0;
+}
+
+.dropdown {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  row-gap: 20px;
+  padding: 10px;
 }
 
-details[open] > h3 {
-  border-radius: 0;
-  background-color: blue;
-  margin: 10px;
-  box-shadow: none;
+li {
+  list-style: none;
+}
+
+.dropdown ul{
+  width: 90%;
+  display: flex;
+  flex-direction: column;
   text-align: left;
-  text-decoration: none;
-  color: #000000;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  }
-
-
-.socialIcon{
-  width: 100%;
-  padding-bottom: 15px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-content: space-between;
+  row-gap: 20px;
+  padding: 20px;
 }
 
-
-
-.saveButton{
-background: linear-gradient(90deg, #00d6b7, #005d91, #6422ae);
-border: none;
-border-radius: 35px;
-padding: 8px;
-font-size: medium;
-font-weight: 700;
-color: white;
-width: 50%;
-}
-
-
-
-.buttonLink{
-text-decoration: none;
-font-size: large;
-font-weight: bold;
-width: 100%;
-color: white;
-}
-
-.social{
-  background: linear-gradient(90deg, #00d6b7, #005d91, #6422ae);
-  border-radius: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 2%;
-}
-
-
-
-<!--css code vir die accordion-->
-
-
-details > summary {
-width: 100%;
-background: linear-gradient(90deg, #00d6b7, #005d91, #6422ae);
-border: none;
-box-shadow: none;
-cursor: pointer;
-font-weight: bold;
-font-size: large;
-padding-left: 10px;
-padding-top: 10px;
-padding-right: 10px;
-padding-bottom: 10px;
-border-radius: 30px;
-color: white;
-text-align: center;
-}
-
-
-
-::marker{
-color: transparent;
-}
-
-
-
-
-details[open] > summary {
-  background: linear-gradient(90deg, #00d6b7, #005d91, #6422ae);
-  width: 100%;
+.icon{
+  padding-right: 15px;
 }
 
 footer{
+  min-height: 20vh;
   width: 100%;
-  height: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.h6{
-  color: transparent;
-}
-
-.h5{
-  color: transparent;
+footer .socialIcon{
+  background: linear-gradient(90deg, #00d6b7, #005d91, #6422ae);
+  width: 100%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
