@@ -1,60 +1,67 @@
-html{
-    font-family: "acumin-pro", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+body{
+    margin: 0%;
+}
+
+.headerBlock{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 2px;
 }
 
 .header{
     width: 100%;
     display: flex;
     flex-direction: row;
-}
-
-.headerLogo{
-    padding-left: 5%;
-    padding-top: 1%;
-    padding-bottom: 1%;
-}
-
-.mainNav{
-    width: 60%;
-    display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: flex-end;
-    align-items: flex-end;
-    align-content: flex-end;
-    column-gap: 5%;
-    padding-right: 5%;
-    padding-bottom: 1%;
+    justify-content: space-between;
+    row-gap: 8px;
 }
 
-.navLink{
-    color: #1a1a1a;
-    text-decoration: none;
-    font-size: 20px;
-}
-
-.navLink:active{
-    text-decoration: none;
-    color: #00d6b7;
-}
-
-.introMain{
-    background-color: #1a1a1a;
-    margin: 0%;
-    padding-left: 5%;
-    padding-top: 2%;
-    padding-right: 5%;
-    padding-bottom: 5%;
+.headerLogoBlock{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    align-content: center;
+    padding: 1%;
 }
 
-.intro{
+.headerLogo{
+    width: 50%;
+}
+
+.logo{
+    width: 100%;
+}
+
+.navBlock{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1%;
+}
+
+.nav{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: right;
+    align-content: flex-end;
+    column-gap: 40px;
+    font-size: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: #1a1a1a;
+}
+
+
+
+.introBlock{
+    background-color: #1a1a1a;
+    width: 48%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -64,43 +71,27 @@ html{
     padding: 2%;
 }
 
-.introBlock{
-    width: 50%;
+.intro{
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-evenly;
 }
 
 .introImage{
-    width: 50%;
+    width: 48%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    background-color: #1a1a1a;
 }
 
 .introArticle{
     color: aliceblue;
-    row-gap: 0;
 }
 
-.introH2{
-    font-size: 50px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.introH1{
-    font-size: 89px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-top: -10%;
-    margin-bottom: -10%;
-}
-
-.introButton{
-    width: 60%;
+.introbutton{
+    width: 90%;
 }
 
 .action{
@@ -109,13 +100,6 @@ html{
     padding: 5%;
     border-radius: 10px;
     border: none;
-}
-
-.actionLink{
-    text-decoration: none;
-    color: black;
-    font-weight: 800;
-    font-size: 20px;
 }
 
 .stepBlock{
@@ -131,14 +115,6 @@ html{
     border: #1a1a1a solid 5px;
 }
 
-.stepTitle{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-}
-
 .stepHeading{
     display: flex;
     flex-direction: row;
@@ -146,8 +122,8 @@ html{
     width: 100%;
     justify-content: center;
     column-gap: 3%;
-    font-size: 50px;
-    margin-bottom: -7%;
+    font-size: large;
+    margin-bottom: 0%;
 }
 
 .number0{
@@ -155,46 +131,65 @@ html{
     flex-direction: column;
     flex-wrap: nowrap;
     place-items: 1;
+    font-size: xx-large;
 }
 
 .number1{
     color: #00d6b7;
+    font-size: xx-large;
     
 }
 
 .number2{
     color: #005d91;
     margin-left: -1%;
+    font-size: xx-large;
 }
 
 .number3{
     color: #6422ae;
     margin-left: -1%;
+    font-size: xx-large;
 }
 
 .stepArticle{
-    font-size: 60px;
+    font-size: x-large;
     width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
     text-align: justify;
-    margin-top: 2%;
+    margin-top: 4%;
 }
 
 .steps{
+    width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     align-content: start;
     align-items: start;
-    margin-top: -5%;
+    margin-top: 0;
 }
 
 .step1{
-    width: 28%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.stepSize{
+    padding: 1%;
+    width: 300px;
+
+}
+
+.step{
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -203,7 +198,7 @@ html{
     padding: 1%;
 }
 
-.step2{
+.stepName{
     font-weight: bold;
     font-size: 30px;
     display: flex;
@@ -212,7 +207,9 @@ html{
     justify-content: center;
 }
 
-.step3{
+
+
+.stepImage{
     width: 80%;
     display: flex;
     flex-direction: row;
@@ -223,80 +220,13 @@ html{
     padding: 0% 10% 0% 10%
 }
 
-.step4{
+.stepDescription{
     text-align: center;
 }
 
-.stepbutton{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: end;
-}
 
-.stepAction{
-    width: 33%;
-    background-color: #00d6b7;
-    padding: 1%;
-    border-radius: 10px;
-    border: none;
-}
 
-@keyframes slide {
-    100%,
-    50% {
-      transform: translateX(-1800px);
-    }
-    50%,
-    20% {
-      transform: translateX(50px);
-    }
-}
-
-.sliderBox{
-    background-color: grey;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    height: 200px;
-    overflow: hidden;
-}
-
-.slider{
-    width: 95%;
-    display: flex;
-    flex-direction: row;
-    column-gap: 8%
-}
-    
-.sliderBlock{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    overscroll-behavior-x: auto;
-}
-
-.sliderImage{
-    height: 180px;
-    width: fit-content;
-    transform: translateX(100px) rotate(45deg);
-    animation: backwards;
-    animation-name: slide;
-    animation-direction: forward;
-    animation-duration: 10s;
-    animation-delay: 0s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    animation-fill-mode: none;
-    animation-play-state: running;
-}
-
-.cards{
+.cardsBlock{
     background-color: #1a1a1a;
     width: 100%;
     display: flex;
@@ -304,7 +234,9 @@ html{
     justify-content: center;
     align-items: center;
     align-content: center;
+    padding-bottom: 15px;
 }
+
 
 .cardHeader{
     width: 100%;
@@ -314,23 +246,27 @@ html{
     align-items: center;
     align-content: center;
     color: aliceblue;
-    font-size: 50px;
+    font-size: x-large;
 }
 
 .cardOptions{
+    width: 300px;
+}
+
+.cards{
+    width: 100%;
+    background-color: #1a1a1a;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     align-content: center;
-    column-gap: 3%;
 }
 
-.card{
-    width: 30%;
-
+.cardImage{
+    width: 100%;
 }
+
 
 .imageCaption{
     color: aliceblue;
@@ -339,106 +275,12 @@ html{
     font-weight: 900;
 }
 
-.cardButton{
-    width: 100%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-}
 
-.cardAction{
-    width: 30%;
-    background-color: #00d6b7;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    border-radius: 10px;
-    font-size: 80%;
-    border: none;
-}
 
-.form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 5%;
-}
 
-.formHeader{
-    font-size: 40px;
-}
-
-form.contactForm {
-    display: table;
-    font-size: 30px;
-    width: 80%;
-}
-
-div.contactForm {
-    display: table-row;
-    height: 30px;
-}
-
-label,
-input {
-    display: table-cell;
-    margin-bottom: 10px;
-    height: 50px;
-    width: 100%;
-    font-size: 20px;
-}
-
-label {
-    padding-right: 10px;
-}
-
-.contactButton{
-    width: 100%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    width: 25%;
-    background-color: #00d6b7;
-    border-radius: 10px;
-    font-weight: 900;
-    font-size: 20px;
-    border: none;
-}
 
 .footerBlock{
     background: linear-gradient(90deg, #00d6b7, #005d91, #6422ae);
-    display: column;
-    flex-direction: row;
-    padding: 2%;
-}
-
-.footerLogo{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    height: 80px;
-}
-
-.bottomBlock{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
-.empty{
-    width: 15%;
-}
-
-.middleBlock{
-    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -446,80 +288,80 @@ label {
     align-content: center;
 }
 
-.socialHeading{
+.footerLogoBlock{
     width: 100%;
+    padding: 2%;
+    margin: 4px;
+}
+
+.footerLogo{
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 1%;
+    margin-left: 2px;
+}
+
+.bottomBlock{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    column-gap: 8px;
+}
+
+.block{
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 10px;
+}
+
+.socialBlock{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    align-content: center;
+    padding: 1%;
+}
+
+.socialHeading{
+    width: 90%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: center;
+    align-items: center;
+    align-content: center;
 }
 
 .footerH4{
-    width: 100%;
     color: aliceblue;
-    font-size: 35px;
+    width: 100%;
+    font-size: 2em;
     font-weight: 900;
+    padding: 0%;
+    margin: 1%;
+}
+
+.terms{
+    color: aliceblue;
 }
 
 .socialIcon{
     width: 100%;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     align-content: center;
-    column-gap: 2%;
+    column-gap: 15px;
 }
 
-.lastBlock{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
-    align-content: center;
-}
-
-.text{
-    color: aliceblue;
-    font-size: 20px;
-    font-weight: 900;
-    row-gap: 1%;
-    line-height: 2px;
-}
-
-.shop{
-    background-color: antiquewhite;
-    display: flex;
-    flex-direction: row;
-    height: 50vh;
-    padding-bottom: 20px;
-}
-
-.shopImage{
-    background-color: purple;
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.shopPrice{
-    background-color: blue;
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: left;
-    padding: 50px;
-}
-
-.order{
-    background-color: red;
-}
-
-.shopDescription{
-    background-color: #00d6b7;
-    padding-left: 50px;
+.icon{
+    width: 45px;
+    height: 45px;
 }
