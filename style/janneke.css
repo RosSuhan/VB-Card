@@ -14,7 +14,14 @@ a{
 }
 
 body{
-  background-color: black;
+  background-color: #131313;
+  background-image: url(/assets/vbWaterMark.png);
+  background-blend-mode: overlay;
+  backface-visibility: visible;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
   background-blend-mode: overlay;
   backface-visibility: visible;
   background-origin: border-box;
