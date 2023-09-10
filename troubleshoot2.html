@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -231,6 +232,11 @@
             </div>
         </div>
 
+        <footer>
+            <h6>
+                Powered by vbcard.mobi
+            </h6>
+        </footer>
 
         <script>
             (function(){
@@ -274,67 +280,56 @@
                     URL.revokeObjectURL(newLink.href);
                 }
         
-                // create one of these per contact
+                // create one of these per line
                 document.getElementById("saveRentia").addEventListener("click", () => {
                 const contact = {
                     name: "Rentia Adams",
                     phone: "+27 82 822 2997",
                     email: "etadams@polka.co.za",
                     url: "https://vbcard.mobi/adams-doors"
-                    };
-        
-                    createVCard(contact)
-                });
+                };
 
-                // create one of these per contact
-                document.getElementById("saveEugene").addEventListener("click", () => {
-                const contact = {
-                    name: "Eugene Adams",
-                    phone: "+27 82 444 7834",
-                    email: "etadams@polka.co.za",
-                    url: "https://vbcard.mobi/adams-doors"
-                    };
-        
-                    createVCard(contact)
-                });
-
-                // create one of these per contact
-                document.getElementById("saveAletta").addEventListener("click", () => {
-                    const contact = {
-                        name: "Aletta du Toit",
-                        phone: "+27 63 698 7632",
-                        email: "adamsdoors.admin@mweb.co.za",
-                        url: "https://vbcard.mobi/adams-doors"
-                    };
-        
-                    createVCard(contact)
-                });
-
-                // create one of these per contact
-                document.getElementById("saveLorette").addEventListener("click", () => {
-                    const contact = {
-                        name: "Lorette du Plessis",
-                        phone: "+27 82 332 0098",
-                        email: "adamsdoors1@polka.co.za",
-                        url: "https://vbcard.mobi/adams-doors"
-                    };
-        
-                    createVCard(contact)
-                });
-
-                // create one of these per contact
-                document.getElementById("savePaul").addEventListener("click", () => {
-                const contact = {
-                    name: "Paul du Plessis",
-                    phone: "+27 79 557 0488",
-                    email: "adamsdoors.sale@mweb.co.za",
-                    url: "https://vbcard.mobi/adams-doors"
-                    };
-        
-                    createVCard(contact)
-                });
+                createVcard(contact)
+            });
             }())
         </script>
-
-    </body>
+    <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
 </html>
