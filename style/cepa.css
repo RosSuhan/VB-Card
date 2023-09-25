@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.viewsection {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 400px;
+}
+
+.logo {
+    object-fit: contain;
+    max-width: 100dvw;
+}
+
+.bio {
+    padding: .5rem 1.2rem;
+    text-align: center;
+    font: 1.2rem;
+    line-height: 1.2;
+}
+
+.bio-p {
+    padding: .5rem 0;
+}
+
+.buttonSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 1rem;
+}
+
+.buttonLink,
+.buttonLinkDropDown {
+    position: relative;
+    text-decoration: none;
+    background: linear-gradient(90deg, #0FBCBF, #2B75A0, #DA4491, #814693);
+    padding: 1.4rem 2.5rem;
+    border-radius: 30px;
+    font-size: 1rem;
+    text-align: center;
+    color: #000;
+    margin: .5rem 0;
+}
+
+.buttonLink-span,
+.buttonLinkDropDown-span {
+    position: relative;
+}
+
+.buttonLink::before {
+    content: '';
+    position: absolute;
+    inset: .5rem;
+    background-color: #fff;
+    border-radius: 28px;
+}
+
+.document {
+    object-fit: contain;
+}
+
+.footer {
+    min-height: 20px;
+    max-width: 400px;
+    background: linear-gradient(90deg, #0FBCBF, #2B75A0, #DA4491, #814693);
+}
