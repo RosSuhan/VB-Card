@@ -75,3 +75,40 @@ body {
     max-width: 400px;
     background: linear-gradient(90deg, #0FBCBF, #2B75A0, #DA4491, #814693);
 }
+
+.contactInfoBlock {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #eee;
+}
+
+.contactInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactInfo-li {
+    width: 100%;
+    display: flex;
+    line-height: 2rem;
+    padding: .5rem 0;
+}
+
+.contactLink {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+    text-align: left;
+}
+
+.icon {
+    width: 25px;
+    height: 25px;
+    padding-right: 1rem;
+}
