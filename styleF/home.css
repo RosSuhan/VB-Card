@@ -1,0 +1,47 @@
+.hero {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.heading-Experience,
+.heading-TAG,
+.heading-Nfc {
+    color: #fff;
+}
+
+.heading-Experience,
+.heading-Nfc {
+    font-size: 4rem;
+}
+
+.heading-TAG {
+    font-size: 5rem;
+}
+
+.mockUp {
+    object-fit: contain;
+}
+
+.btn {
+    border: none;
+    padding: 1.2rem .5rem;
+    border-radius: 30px;
+    background: linear-gradient(90deg, #00d6b7, #005d91, #6422ae);
+}
+
+.actionbtn {
+    background-color: #fff;
+    padding: .8rem 2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    color: #000;
+}

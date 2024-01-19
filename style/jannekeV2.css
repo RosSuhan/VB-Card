@@ -1,0 +1,140 @@
+body {
+    width: 100dvw;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.backgroundImage {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header,
+.contactInfoBlock,
+.socialBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 250px;
+    max-width: 600px;
+    padding: .5rem 1rem;
+}
+
+.logo {
+    object-fit: contain;
+}
+
+.profileName {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.businessName {
+    font-size: 1.8rem;
+    margin-top: -1rem;
+    text-align: center;
+}
+
+.busShortBio {
+    font-size: 1rem;
+    text-align: center;
+    text-wrap: wrap;
+    margin-top: -.5rem;
+}
+
+.dropdownButton,
+.button,
+.saveButton {
+    width: 100%;
+    padding: 1.4rem 0;
+    border: none;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.saveButton {
+    width: 60%;
+}
+
+.btnContent,
+.saveBtnContent {
+    border-radius: 10px;
+    position: absolute;
+    text-decoration: none;
+}
+
+.btnContent {
+    font-size: 1.2rem;
+    font-weight: 700;
+    width: 90%;
+    padding: .5rem;
+}
+
+.saveBtnContent {
+    width: 85%;
+    font-weight: 600;
+    padding: .7rem .5rem;
+}
+
+
+.dropdown {
+    width: 100%;
+    display: none;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.opendropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dropdownList {
+    list-style: none;
+    width: 80%;    
+}
+
+.dropdownItem {
+    padding: .5rem 0;
+}
+
+.dropdownContent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+}
+
+.icon {
+    padding-right: 1rem;
+}
+
+.socialBlock {
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 1rem 0;
+}
+
+.socialLink {
+    text-decoration: none;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1rem;
+}
+
+.footerLogo {
+    padding-left: .6rem;
+}

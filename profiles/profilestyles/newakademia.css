@@ -1,0 +1,209 @@
+body{
+margin-top: 0px;
+margin-bottom: 0px;
+margin-left: 0px;
+margin-right: 0px;
+width: 100%;
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+align-items: center;
+align-content: space-evenly;
+}
+
+a{
+text-decoration: none;
+color: #000000;
+}
+
+.background{
+width: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-content: center;
+align-items: center;
+margin: 0;
+}
+
+.pageContent{
+max-width: 500px;
+min-width: 350px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+align-content: space-evenly;
+}
+
+.header{
+margin: 0;
+background-color: #0e1e3b;
+border-bottom: #935e28 solid 15px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+align-content: center;
+}
+
+.logo{
+width: 70%;
+}
+
+.introBlock{
+width: 100%;
+margin: 0;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+align-content: center;
+}
+
+.name{
+width: 100%;
+color: #000000;
+font-family: "Acumin Pro Font family", Sans-serif;
+font-size: 30px;
+font-weight: bold;
+margin-bottom: -2%;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+align-content: center;
+}
+
+.content{
+width: 90%;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+align-content: center;
+padding-top: 10px;
+margin-bottom: 7%;
+row-gap: 20px;
+}
+
+details,
+.btn {
+width: 100%;
+padding-left: 10px;
+padding-top: 10px;
+padding-right: 10px;
+padding-bottom: 10px;
+border-radius: 30px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-content: center;
+align-items: center;
+}
+
+.btn {
+border: none;
+padding: 0;
+}
+
+details > summary,
+.btn-naam {
+width: 100%;
+background-color: #0e1e3b;
+padding-top: 10px;
+padding-bottom: 10px;
+border-radius: 30px;
+border: none;
+box-shadow: none;
+cursor: pointer;
+font-weight: bold;
+font-size: x-large;
+color: white;
+text-align: center;
+}
+
+::marker{
+color: transparent;
+}
+
+.btn-content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hide {
+    display: none;
+}
+
+
+.btn-content-info {
+    width: 50%;
+    padding: 1rem 0;
+}
+
+h4{
+width: 100%;
+text-align: center;
+font-size: x-large;
+margin-bottom: -1%;
+}
+
+.saveButton{
+background-color: #0e1e3b;
+width: 85%;
+border: none;
+border-radius: 35px;
+padding: 10px;
+font-size: 0.9rem;
+font-weight: 500;
+color: white;
+align-items: center;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-content: center;
+align-items: center;
+}
+
+.summaryInfo{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: left;
+align-content: center;
+row-gap: 15px;
+}
+
+h5{
+text-align: center;
+font-size: larger;
+margin-bottom: -1%;
+}
+
+.position{
+color: #000000;
+font-size: 20px;
+}
+
+h3{
+text-align: left;
+}
+
+
+.socialIcon{
+max-width: 500px;
+min-width: 350px;
+padding-top: 15px;
+padding-bottom: 15px;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+align-content: space-evenly;
+column-gap: 8%;
+row-gap: 15px;
+}

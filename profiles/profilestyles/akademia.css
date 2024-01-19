@@ -88,7 +88,8 @@ a{
   row-gap: 20px;
 }
 
-details{
+details,
+.btn {
   width: 100%;
   padding-left: 10px;
   padding-top: 10px;
@@ -102,7 +103,13 @@ details{
   align-items: center;
 }
 
-details > summary {
+.btn {
+  border: none;
+  padding: 0;
+}
+
+details > summary,
+.btn-naam {
   width: 100%;
   background-color: #0e1e3b;
   padding-top: 10px;

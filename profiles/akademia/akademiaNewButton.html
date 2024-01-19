@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Akademia
+        </title>
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=5.0, width=device-width" />
+
+        <link href="/assets/Fav icon/favicon.ico" rel="shortcut icon" />
+
+        <link rel="stylesheet" type="text/css" href="/profiles/profilestyles/newakademia.css" />
+
+
+    </head>
+    <body>
+        <header class="header">
+            <img src="/profiles/akademia/assets/Akademia Logo wit.png" alt="akademia logo" class="logo">
+        </header>
+        
+        <div class="intro">
+            <h1 class="name">
+                Johan Lubbe
+            </h1>
+
+            <h3 class="position">
+                Studentewerwer
+            </h3>
+        </div>
+
+        <button type="button" class="btn" onclick="displayContent()"><span id="contactPerson" class="btn-naam"></span></button>
+
+        <article>
+            <p id="number"></p>
+
+            <p id="work"></p>
+        </article>
+
+        <script>
+            const person = []
+            person["firstName"] = "Johan";
+            person["lastName"] = "Lubbe";
+            person["number"] = "012 345 6789";
+            person["cellnumber"] = "0861 222 888";
+            person["email"] = "johan@akademia.ac.za";
+
+            document.getElementById("contactPerson").innerHTML = ("Kontak" + " " + person.firstName + " " + person.lastName);
+
+            function displayContent() {
+                const body = document.body;
+
+                const contactInfo = document.createElement("div")
+                contactInfo.setAttribute("class", "btn-content")
+                body.appendChild(contactInfo);
+
+                const panel = document.createElement("a");
+                panel.setAttribute("href", "tel:" + person.cellnumber);
+                panel.setAttribute("class", "btn-content-info");
+                panel.textContent = person.cellnumber;
+                contactInfo.appendChild(panel);
+
+                const mailAddress = document.createElement("a")
+                mailAddress.setAttribute("href", "mailto:" + person.email);
+                mailAddress.setAttribute("class", "btn-content-info");
+                mailAddress.textContent = person.email;
+                contactInfo.appendChild(mailAddress);
+
+                const saveBtn = document.createElement("button");
+                saveBtn.setAttribute("class", "saveButton");
+                saveBtn.setAttribute("type", "button");
+                saveBtn.setAttribute("id", person.firstName + "ContactButton")
+                saveBtn.textContent = "Save To Contacts";
+                contactInfo.appendChild(saveBtn);
+            }
+        </script>
+<script>
+    
+</script>               
+
+
+    </body>
+</html>

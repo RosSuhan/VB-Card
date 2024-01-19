@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            The Iconic Mosselbay Tunnel
+        </title>
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=5.0, width=device-width" />
+
+        <link href="/assets/Fav icon/favicon.ico" rel="shortcut icon" />
+
+        <link rel="stylesheet" type="text/css" href="/style/pinnaclepoint.css" />
+
+
+    </head>
+    <body class="body">
+        <header class="header">
+            
+        </header>
+
+        <section class="section1">
+            <img src="/assets/Pnnalce logo.jpg" alt="" width="200" height="200" class="logo">
+          <br>
+            
+            <div class="slideshow-container">
+                <!--full width images-->
+                <div class="mySlides fade">
+                    <img src="https://dummyimage.com/300x300/000/fff" alt="" class="image" width="250" height="250">
+                </div>
+                <div class="mySlides fade">
+                    <img src="https://dummyimage.com/300x300/000/eee" alt="" class="image" width="250" height="250">
+                </div>
+                <div class="mySlides fade">
+                    <img src="https://dummyimage.com/300x300/fff/000" alt="" class="image" width="250" height="250">
+                </div>
+                <div class="mySlides fade">
+                    <img src="https://dummyimage.com/300x300/eee/ggg" alt="" class="image" width="250" height="250">
+                </div>
+                <div class="mySlides fade">
+                    <img src="https://dummyimage.com/300x300/000/333" alt="" class="image" width="250" height="250">
+                </div>
+                <div class="mySlides fade">
+                    <img src="https://dummyimage.com/300x300/eee/fff" alt="" class="image" width="250" height="250">
+                </div>
+                <div class="mySlides fade">
+                    <img src="https://dummyimage.com/300x300/fff/000" alt="" class="image" width="250" height="250">
+                </div>
+            </div> 
+
+            <div class="dropdown">
+                <button id="frikkieBtn" class="dropbtn">touch frikkie</button>
+                <div id="frikkieDropdown" class="dropdown-content">
+                    <div class="imageDropdown">
+                        <img src="https://dummyimage.com/300x300/fff/000" alt="" class="image" width="250" height="250">
+                        <p>soek die frikkies</p>                    
+                    </div>
+                    <a href="" download="" class="saveBtn">Download Content</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button id="vlagBtn" class="dropbtn">SA flags</button>
+                <div id="vlagDropdown" class="dropdown-content">
+                    <div class="imageDropdown">
+                        <img src="https://dummyimage.com/300x300/eee/fff" alt="" class="image" width="250" height="250">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus id eius, alias quas voluptates perspiciatis quisquam, ipsum recusandae est cupiditate eaque odio perferendis, odit maxime aliquid? Ullam explicabo deserunt nesciunt!</p>                    
+                    </div>
+                    <a href="" download="" class="saveBtn">Download Content</a>
+                </div>
+            </div>
+        </section>
+
+        
+
+        <footer>
+            <h6>
+                Powered by vbcard.mobi
+            </h6>
+        </footer>
+
+        <script>
+            let slideIndex = 0;
+            showSlides();
+      
+function showSlides() {
+let i;
+let slides = document.getElementsByClassName("mySlides");
+for (i = 0; i < slides.length; i++) {
+slides[i].style.display = "none";
+}
+slideIndex++;
+if (slideIndex > slides.length) {slideIndex = 1}
+slides[slideIndex-1].style.display = "block";
+setTimeout(showSlides, 3000); // Change image every 3 seconds
+}
+          </script>
+
+        <script>
+            // Get the button, and when the user clicks on it, execute myFunction
+            document.getElementById("frikkieBtn").onclick = function() {openfrikkiedropdownFunction()};
+            
+            /* myFunction toggles between adding and removing the show class, which is used to hide and show the dropdown content */
+            function openfrikkiedropdownFunction() {
+              document.getElementById("frikkieDropdown").classList.toggle("showMaggie");
+            }
+        </script>
+
+<script>
+    // Get the button, and when the user clicks on it, execute myFunction
+    document.getElementById("vlagBtn").onclick = function() {opendropdownFunction()};
+    
+    /* myFunction toggles between adding and removing the show class, which is used to hide and show the dropdown content */
+    function opendropdownFunction() {
+      document.getElementById("vlagDropdown").classList.toggle("showMaggie");
+    }
+</script>
+    </body>
+</html>
+
+
+
+
+              
+
+        
+        
